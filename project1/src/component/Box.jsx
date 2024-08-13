@@ -1,12 +1,12 @@
 import React from 'react'
 
 const Box = (props) => {
-  console.log(props)
+  // console.log(props)
   return (
     <div className='box'>
       <h1>{props.title}</h1>
       <img src={props.item && props.item.img} alt={props.item && props.item.name} />
-      <h2>WIN</h2>
+      <h2>{props.result}</h2>
     </div>
   )
 }
