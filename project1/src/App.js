@@ -33,24 +33,30 @@ const choice = {
 function App() {
   const [userSelect, setUserSelect] = useState(null);
   const [comSelect, setComSelect] = useState(null);
+  const [result, setResult] = useState("");
 
   const play = (userChoice) => {
     setUserSelect(choice[userChoice]);
-    randomChoice();
+    let comChoice = randomChoice();
+    setComSelect(choice[comChoice]);
+    judgement(choice[userChoice], choice[comChoice]);
   }
 
   const randomChoice = () => {
     let itemArr = Object.keys(choice);
     let randomItem = Math.floor(Math.random() * itemArr.length);
-    let final = itemArr[randomItem]
-    setComSelect(choice[final]);
+    return itemArr[randomItem];
+  }
+
+  const judgement = () => {
+
   }
 
   return (
     <div>
       <div className="main">
-        <Box title="You" item={userSelect}/>
-        <Box title="Computer" item={comSelect}/>
+        <Box title="You" item={userSelect} result={judgement}/>
+        <Box title="Computer" item={comSelect} result={judgement}/>
       </div>
 
       <div className='choice-btn'>
