@@ -3,7 +3,7 @@ import './App.css';
 import Box from './component/Box';
 
 // 가위, 바위, 보 이미지 import
-import rock from './rock.png';
+import rock from './images/rock.png';
 import scissors from './images/scissors.png';
 import paper from './images/paper.png';
 
