@@ -61,9 +61,15 @@ function App() {
       </div>
 
       <div className='choice-btn'>
-        <button onClick={() => play("scissors")}>가위</button>
-        <button onClick={() => play("rock")}>바위</button>
-        <button onClick={() => play("paper")}>보</button>
+        <button onClick={() => play("scissors")}>
+          <img src={choice.scissors.img} alt="scissors" />
+        </button>
+        <button onClick={() => play("rock")}>
+          <img src={choice.rock.img} alt="rock" />
+        </button>
+        <button onClick={() => play("paper")}>
+          <img src={choice.paper.img} alt="paper" />
+        </button>
       </div>
     </div>
   );
