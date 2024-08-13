@@ -8,23 +8,24 @@ button {
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   background-image: url('https://media.istockphoto.com/id/910093098/ko/%EB%B2%A1%ED%84%B0/%ED%94%BD%EC%85%80-%EC%95%84%ED%8A%B8-%EA%B2%8C%EC%9E%84-%EC%9C%84%EC%B9%98%EC%9E%85%EB%8B%88%EB%8B%A4.jpg?s=612x612&w=0&k=20&c=ouKxHK8P1hzV4EbY9Jurf6XpKMF6G5tRAB2v548Ux_4=');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
 }
 
 .main {
   display: flex;
-  justify-content: center;
-  margin-top: 100px;
 }
 
 .box {
   width: 400px;
   border: 2px solid #000;
-  border-radius: 20px;
+  border-radius: 22px;
   text-align: center;
   background-color: rgba(255, 255, 255, .6);
 }
