@@ -44,14 +44,15 @@ button {
   border-radius: 22px;
   text-align: center;
   background-color: rgba(128, 212, 247, 0.6);
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.304);
 }
 
 .box.win {
-  background-color: rgba(162, 255, 195, 0.6);
+  background-color: rgba(89, 255, 145, 0.5);
 }
 
 .box.lose {
-  background-color: rgba(255, 148, 148, 0.6);
+  background-color: rgba(255, 124, 124, 0.5);
 }
 
 .box.tie {
