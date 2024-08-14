@@ -77,8 +77,8 @@ function App() {
   }
 
   return (
-    <div>
-      <div className="main">
+    <div className='wrapper'>
+      <div className="main-box">
         <Box title="You" item={userSelect} result={result} />
         <Box title="Computer" item={comSelect} result={result}/>
       </div>
