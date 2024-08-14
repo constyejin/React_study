@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import './App.css';
+import Score from './component/Score';
 import Box from './component/Box';
 
 // 가위, 바위, 보 이미지 import
@@ -35,6 +36,9 @@ function App() {
   const [userSelect, setUserSelect] = useState(null);
   const [comSelect, setComSelect] = useState(null);
   const [result, setResult] = useState("");
+  const [userScore, setUserScore] = useState(0);
+  const [comScore, setComScore] = useState(0);
+
 
   const play = (userChoice) => {
     setUserSelect(choice[userChoice]);
@@ -42,6 +46,10 @@ function App() {
     setComSelect(comChoice);
     const gameResult = judgement(choice[userChoice], comChoice);
     setResult(gameResult);
+
+    if(gameResult !== "TIE") {
+      gameResult === "WIN" ? setUserScore(userScore + 1) : setComScore(comScore + 1);
+    }
   }
 
   const randomChoice = () => {
@@ -76,14 +84,18 @@ function App() {
     }
   }
 
+  const reset = () => {
+    setUserScore(0);
+    setComScore(0);
+    setUserSelect(null);
+    setComSelect(null);
+    setResult("");
+  }
+
+
   return (
     <div className='wrapper'>
-      <div className='score-box'>
-        <div className='user-score'>1</div>
-        <span>:</span>
-        <div className="com-score">2</div>
-        <button className='reset-btn'>RESET</button>
-      </div>
+      <Score user={userScore} computer={comScore} reset={reset}/>
 
       <div className="main-box">
         <Box title="You" item={userSelect} result={result} />
