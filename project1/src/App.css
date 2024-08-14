@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
 * {
   box-sizing: border-box;
-  color: #555;
-}
-
-button {
-  cursor: pointer;
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -12,10 +12,17 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url('https://media.istockphoto.com/id/910093098/ko/%EB%B2%A1%ED%84%B0/%ED%94%BD%EC%85%80-%EC%95%84%ED%8A%B8-%EA%B2%8C%EC%9E%84-%EC%9C%84%EC%B9%98%EC%9E%85%EB%8B%88%EB%8B%A4.jpg?s=612x612&w=0&k=20&c=ouKxHK8P1hzV4EbY9Jurf6XpKMF6G5tRAB2v548Ux_4=');
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-image: url('https://i.pinimg.com/736x/cb/66/96/cb6696d40b2cd102bf5f11c0355d9e2e.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+button {
+  cursor: pointer;
 }
 
 .main {
