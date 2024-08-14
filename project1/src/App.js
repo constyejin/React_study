@@ -39,7 +39,8 @@ function App() {
     setUserSelect(choice[userChoice]);
     const comChoice = randomChoice();
     setComSelect(comChoice);
-    judgement(choice[userChoice], comChoice);
+    const gameResult = judgement(choice[userChoice], comChoice);
+    setResult(gameResult);
   }
 
   const randomChoice = () => {
@@ -49,15 +50,36 @@ function App() {
   }
 
 
+  // WIN (You 기준)
+  // You == Scissros | Compuper == Paper 
+  // You == Rock     | Computer == Scissors
+  // You == Paper    | Computer == Rock
+  // LOSE
+  // You == Scissros | Compuper == Rock 
+  // You == Rock     | Compuper == Paper 
+  // You == Paper    | Computer == Scissors
+  // TIE 
+  // You와 컴퓨터의 값이 같다
   const judgement = (user, com) => {
-    console.log(user, com)
+    const you = user.name;
+    const computer = com.name;
+    
+    if(you === computer) {
+      return ["TIE", "TIE"];
+    } else if(you === "Scissors") {
+      return computer === "Paper" ? ["WIN", "LOSE"] : ["LOSE", "WIN"];
+    } else if(you === "Rock") {
+      return computer === "Scissors" ? ["WIN", "LOSE"] : ["LOSE", "WIN"];
+    } else if(you === "Paper") {
+      return computer === "Rock" ? ["WIN", "LOSE"] : ["LOSE", "WIN"];
+    }
   }
 
   return (
     <div>
       <div className="main">
-        <Box title="You" item={userSelect} result={judgement}/>
-        <Box title="Computer" item={comSelect} result={judgement}/>
+        <Box title="You" item={userSelect} result={result[0]}/>
+        <Box title="Computer" item={comSelect} result={result[1]}/>
       </div>
 
       <div className='choice-btn'>
