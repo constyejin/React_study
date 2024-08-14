@@ -99,6 +99,12 @@ button {
   }
 
   .box img {
+    width: 60%;
     height: 240px;
+  }
+
+  .choice-btn img {
+    width: 50px;
+    height: 50px;
   }
 }
