@@ -16,7 +16,6 @@ const boxDefault = {
 const Box = (props) => {
   const {title} = props;
   let {result} = props;
-  console.log(title, result)
 
   if(title === "Computer" && result !== "TIE" && result !== "") {
     result = result === "WIN" ? "LOSE" : "WIN";
