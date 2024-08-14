@@ -30,6 +30,7 @@ const choice = {
   },
 }
 
+
 function App() {
   const [userSelect, setUserSelect] = useState(null);
   const [comSelect, setComSelect] = useState(null);
@@ -63,23 +64,23 @@ function App() {
   const judgement = (user, com) => {
     const you = user.name;
     const computer = com.name;
-    
+
     if(you === computer) {
-      return ["TIE", "TIE"];
+      return "TIE";
     } else if(you === "Scissors") {
-      return computer === "Paper" ? ["WIN", "LOSE"] : ["LOSE", "WIN"];
+      return computer === "Paper" ? "WIN" : "LOSE";
     } else if(you === "Rock") {
-      return computer === "Scissors" ? ["WIN", "LOSE"] : ["LOSE", "WIN"];
+      return computer === "Scissors" ? "WIN" : "LOSE";
     } else if(you === "Paper") {
-      return computer === "Rock" ? ["WIN", "LOSE"] : ["LOSE", "WIN"];
+      return computer === "Rock" ? "WIN" : "LOSE";
     }
   }
 
   return (
     <div>
       <div className="main">
-        <Box title="You" item={userSelect} result={result[0]}/>
-        <Box title="Computer" item={comSelect} result={result[1]}/>
+        <Box title="You" item={userSelect} result={result} />
+        <Box title="Computer" item={comSelect} result={result}/>
       </div>
 
       <div className='choice-btn'>
