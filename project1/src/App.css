@@ -126,6 +126,10 @@ button {
     min-width: 300px;
   }
 
+  .reset-btn {
+    right: 12px;
+  }
+
   .main-box {
     width: 90%;
     min-width: 300px;
@@ -133,6 +137,11 @@ button {
 
   .box {
     height: 400px;
+  }
+
+  .box h1 {
+    font-size: 20px;
+    margin-bottom: 30px;
   }
 
   .box img {
