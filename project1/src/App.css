@@ -8,13 +8,18 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   font-family: "New Amsterdam", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
   background-image: url('https://i.pinimg.com/736x/cb/66/96/cb6696d40b2cd102bf5f11c0355d9e2e.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -25,18 +30,20 @@ button {
   cursor: pointer;
 }
 
-.main {
+.main-box {
   display: flex;
+  justify-content: space-between;
+  width: 50%;
+  max-width: 800px;
+  min-width: 700px;
 }
 
 .box {
-  width: 400px;
+  width: calc((100% / 2) - 10px);
   height: 460px;
-  /* border: 2px solid #000; */
   border-radius: 22px;
   text-align: center;
   background-color: rgba(128, 212, 247, 0.6);
-
 }
 
 .box.win {
@@ -51,12 +58,8 @@ button {
   background-color: rgba(255, 255, 255, .6);
 }
 
-.box:nth-child(1) {
-  margin-right: 20px;
-}
-
 .box img {
-  width: 300px;
+  width: 100%;
   height: 300px;
   object-fit: contain;
 }
@@ -81,4 +84,21 @@ button {
   width: 60px;
   height: 60px;
   object-fit: contain;
+}
+
+
+@media screen and (max-width : 768px) {
+  .main-box {
+    width: 90%;
+    max-width: 700px;
+    min-width: 300px;
+  }
+
+  .box {
+    height: 400px;
+  }
+
+  .box img {
+    height: 240px;
+  }
 }
