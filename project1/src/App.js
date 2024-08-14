@@ -37,14 +37,14 @@ function App() {
 
   const play = (userChoice) => {
     setUserSelect(choice[userChoice]);
-    let comChoice = randomChoice();
+    const comChoice = randomChoice();
     setComSelect(comChoice);
     judgement(choice[userChoice], comChoice);
   }
 
   const randomChoice = () => {
-    let itemArr = Object.keys(choice);
-    let randomItem = Math.floor(Math.random() * itemArr.length);
+    const itemArr = Object.keys(choice);
+    const randomItem = Math.floor(Math.random() * itemArr.length);
     return choice[itemArr[randomItem]]; 
   }
 
