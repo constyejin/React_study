@@ -78,6 +78,13 @@ function App() {
 
   return (
     <div className='wrapper'>
+      <div className='score-box'>
+        <div className='user-score'>1</div>
+        <span>:</span>
+        <div className="com-score">2</div>
+        <button className='reset-btn'>RESET</button>
+      </div>
+
       <div className="main-box">
         <Box title="You" item={userSelect} result={result} />
         <Box title="Computer" item={comSelect} result={result}/>
