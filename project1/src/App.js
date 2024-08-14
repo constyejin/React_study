@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import Score from './component/Score';
 import Box from './component/Box';
@@ -36,8 +36,12 @@ function App() {
   const [userSelect, setUserSelect] = useState(null);
   const [comSelect, setComSelect] = useState(null);
   const [result, setResult] = useState("");
-  const [userScore, setUserScore] = useState(0);
-  const [comScore, setComScore] = useState(0);
+  const [userScore, setUserScore] = useState(() => {
+    return !JSON.parse(localStorage.getItem('userScore')) ? 0 : JSON.parse(localStorage.getItem('userScore'))
+  });
+  const [comScore, setComScore] = useState(() => {
+    return !JSON.parse(localStorage.getItem('comScore')) ? 0 : JSON.parse(localStorage.getItem('comScore'))
+  });
 
 
   const play = (userChoice) => {
@@ -91,6 +95,14 @@ function App() {
     setComSelect(null);
     setResult("");
   }
+
+  useEffect(() => {
+    localStorage.setItem('userScore', JSON.stringify(userScore));
+  }, [userScore]);
+
+  useEffect(() => {
+    localStorage.setItem('comScore', JSON.stringify(comScore));
+  }, [comScore]);
 
 
   return (
