@@ -36,12 +36,16 @@ function App() {
   const [userSelect, setUserSelect] = useState(null);
   const [comSelect, setComSelect] = useState(null);
   const [result, setResult] = useState("");
-  const [userScore, setUserScore] = useState(() => {
-    return !JSON.parse(localStorage.getItem('userScore')) ? 0 : JSON.parse(localStorage.getItem('userScore'))
-  });
-  const [comScore, setComScore] = useState(() => {
-    return !JSON.parse(localStorage.getItem('comScore')) ? 0 : JSON.parse(localStorage.getItem('comScore'))
-  });
+  const [score, setScore] = useState(() => {
+    return !JSON.parse(localStorage.getItem('score')) ? {userScore : 0, comScore : 0} : JSON.parse(localStorage.getItem('score'));
+  })
+
+  // const [userScore, setUserScore] = useState(() => {
+  //   return !JSON.parse(localStorage.getItem('userScore')) ? 0 : JSON.parse(localStorage.getItem('userScore'))
+  // });
+  // const [comScore, setComScore] = useState(() => {
+  //   return !JSON.parse(localStorage.getItem('comScore')) ? 0 : JSON.parse(localStorage.getItem('comScore'))
+  // });
 
 
   const play = (userChoice) => {
@@ -51,9 +55,21 @@ function App() {
     const gameResult = judgement(choice[userChoice], comChoice);
     setResult(gameResult);
 
-    if(gameResult !== "TIE") {
-      gameResult === "WIN" ? setUserScore(userScore + 1) : setComScore(comScore + 1);
+    if(gameResult === "WIN") {
+      setScore({
+        ...score,
+        userScore : score.userScore + 1
+      })
+    } else {
+      setScore({
+        ...score,
+        comScore : score.comScore + 1
+      })
     }
+
+    // if(gameResult !== "TIE") {
+    //   gameResult === "WIN" ? setUserScore(userScore + 1) : setComScore(comScore + 1);
+    // }
   }
 
   const randomChoice = () => {
@@ -89,25 +105,30 @@ function App() {
   }
 
   const reset = () => {
-    setUserScore(0);
-    setComScore(0);
+    // setUserScore(0);
+    // setComScore(0);
+    setScore({userScore : 0, comScore : 0})
     setUserSelect(null);
     setComSelect(null);
     setResult("");
   }
 
   useEffect(() => {
-    localStorage.setItem('userScore', JSON.stringify(userScore));
-  }, [userScore]);
+    localStorage.setItem('score', JSON.stringify(score))
+  }, [score])
 
-  useEffect(() => {
-    localStorage.setItem('comScore', JSON.stringify(comScore));
-  }, [comScore]);
+  // useEffect(() => {
+  //   localStorage.setItem('userScore', JSON.stringify(userScore));
+  // }, [userScore]);
+
+  // useEffect(() => {
+  //   localStorage.setItem('comScore', JSON.stringify(comScore));
+  // }, [comScore]);
 
 
   return (
     <div className='wrapper'>
-      <Score user={userScore} computer={comScore} reset={reset}/>
+      <Score score={score} reset={reset}/>
 
       <div className="main-box">
         <Box title="You" item={userSelect} result={result} />
