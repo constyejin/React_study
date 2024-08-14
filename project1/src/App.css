@@ -56,6 +56,11 @@ button {
 .choice-btn button {
   border: none;
   background-color: transparent;
+  transition: transform 300ms ease-in-out;
+}
+
+.choice-btn button:hover {
+  transform: scale(1.1);
 }
 
 .choice-btn img {
