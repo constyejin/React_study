@@ -36,6 +36,7 @@ function App() {
   const [userSelect, setUserSelect] = useState(null);
   const [comSelect, setComSelect] = useState(null);
   const [result, setResult] = useState("");
+  const [count, setCount] = useState(10);
   const [score, setScore] = useState(() => {
     return !JSON.parse(localStorage.getItem('score')) ? {userScore : 0, comScore : 0} : JSON.parse(localStorage.getItem('score'));
   })
@@ -49,6 +50,7 @@ function App() {
 
 
   const play = (userChoice) => {
+    console.log(choice[userChoice]);
     setUserSelect(choice[userChoice]);
     const comChoice = randomChoice();
     setComSelect(comChoice);
@@ -75,9 +77,11 @@ function App() {
   const randomChoice = () => {
     const itemArr = Object.keys(choice);
     const randomItem = Math.floor(Math.random() * itemArr.length);
+    const userRandom = choice[itemArr[randomItem]].name.toLowerCase();
+
     return choice[itemArr[randomItem]]; 
   }
-
+  
 
   // WIN (You 기준)
   // You == Scissros | Compuper == Paper 
@@ -128,7 +132,7 @@ function App() {
 
   return (
     <div className='wrapper'>
-      <Score score={score} reset={reset}/>
+      <Score score={score} reset={reset} count={count}/>
 
       <div className="main-box">
         <Box title="You" item={userSelect} result={result} />

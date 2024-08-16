@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react' 
 
 const Score = (props) => {
   return (
     <div className='score-box'>
       <div className='score-timer pos-center-y'>
-        <p>TIMER : 10</p>
+        <p>TIMER : {props.count}</p>
 
       </div>
 
