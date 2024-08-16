@@ -5,6 +5,8 @@
   font-family: "New Amsterdam", sans-serif;
   font-weight: 400;
   font-style: normal;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -32,6 +34,11 @@ button {
   background-color: transparent;
 }
 
+.pos-center-y {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .score-box {
   position: relative;
   display: flex;
@@ -45,6 +52,15 @@ button {
   background-color: rgba(128, 212, 247, 0.6);
 }
 
+.score-timer {
+  position: absolute;
+  left: 22px;
+}
+
+.score-num {
+  display: flex;
+}
+
 .score-box span {
   padding: 0 12px;
 }
@@ -52,8 +68,6 @@ button {
 .reset-btn {
   position: absolute;
   right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
   font-size: 18px;
   color: red;
   transition: color 300ms ease-in-out;
@@ -73,10 +87,14 @@ button {
 }
 
 .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: calc((100% / 2) - 10px);
   height: 460px;
-  border-radius: 22px;
+  padding: 30px;
   text-align: center;
+  border-radius: 22px;
   background-color: rgba(128, 212, 247, 0.6);
   box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.304);
 }
