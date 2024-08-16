@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {userEffect} from 'react';
 import './App.css';
 import BoxClass from './component/BoxClass';
 import ScoreClass from './component/ScoreClass';
