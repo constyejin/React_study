@@ -29,7 +29,7 @@ function App() {
     getCurrentLocation();
   }, [])
 
-  let weatherTxt = (weather.weather[0].main).toLowerCase();
+  let weatherTxt = weather?.weather[0].main.toLowerCase();
 
   return (
     <div className={`wrapper ${weatherTxt}`}>
