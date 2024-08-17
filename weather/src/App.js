@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
-import './App.css';
-import WeatherBox from './component/WeatherBox';
 
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import WeatherBox from './component/WeatherBox';
+import WeatherBtn from './component/WeatherBtn';
 
 function App() {
   const [weather, setWeather] = useState(null);
@@ -16,7 +19,6 @@ function App() {
   }
 
   const getWeatherByCurrentLocation = async(lat, lon, apiKey) => {
-    // units=metric
     let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
     let response = await fetch(url);
     let data = await response.json();
@@ -28,8 +30,11 @@ function App() {
   }, [])
 
   return (
-    <div className='wrapper cloudy'>
-      <WeatherBox weather={weather} />
+    <div className={`wrapper clouds`}>
+      <div>
+        <WeatherBox weather={weather} />
+        <WeatherBtn />
+      </div>
     </div>
   );
 }
