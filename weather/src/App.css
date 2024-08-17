@@ -132,3 +132,26 @@
   display: flex;
   margin-top: 30px;
 }
+
+@media screen and (max-width : 568px) {
+  .box:first-child {
+    height: 80%;
+  }
+
+  .weather-icon {
+    width: 180px;
+    height: 180px;
+  }
+
+  .temp {
+    font-size: 24px;
+  }
+
+  .weather-txt {
+    font-size: 20px;
+  }
+
+  .humid p:first-child, .wind p:first-child {
+    font-size: 20px;
+  }
+}
