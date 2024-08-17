@@ -2,13 +2,13 @@ import React from 'react';
 // Clear, Clouds, Rain
 
 const WeatherBox = ({weather}) => {
-  console.log(weather)
   // 켈빈(Kelvin), ℃ 섭씨(Celsius), ℉ 화씨(Fahrenheit)
-  let fah = ((weather?.main.temp * 9 / 5) + 32).toFixed(2);
+  let fah = weather && ((weather.main.temp * 9 / 5) + 32).toFixed(2);
+
   return (
     <div className='weather-main-box'>
       <div className='box'>
-        <h1>{weather?.name}</h1>
+        <h1>{weather?.name.toUpperCase()}</h1>
         <div className='weather-icon'></div>
 
         <div className='temp'>
