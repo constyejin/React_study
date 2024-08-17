@@ -11,16 +11,28 @@
   background-size: cover;
 }
 
-.wrapper.sun {
+.wrapper.clear {
   background-image: url('https://img.freepik.com/premium-photo/blue-sky-background-with-clouds-clouds-clear-day_522160-1095.jpg');
 }
 
-.wrapper.cloudy {
+.wrapper.clear .weather-icon {
+  background-image: url(./assets/icons/clear.svg);
+}
+
+.wrapper.clouds {
   background-image: url('https://st4.depositphotos.com/3141125/20534/i/450/depositphotos_205343696-stock-photo-clouds-background-dramatic-grey-clouds.jpg');
+}
+
+.wrapper.clouds .weather-icon {
+  background-image: url(./assets/icons/clouds.svg);
 }
 
 .wrapper.rain {
   background-image: url('https://cdn.wallpapersafari.com/11/43/VX6CGm.jpg');
+}
+
+.wrapper.rain .weather-icon {
+  background-image: url(./assets/icons/rain.svg);
 }
 
 .wrapper > div {
@@ -50,7 +62,12 @@
 }
 
 .weather-icon {
-  font-size: 120px;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .temp {
@@ -99,3 +116,5 @@
 .humid p:first-child, .wind p:first-child {
   font-size: 22px;
 }
+
+
