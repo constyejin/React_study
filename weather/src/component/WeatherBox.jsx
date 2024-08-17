@@ -6,7 +6,7 @@ const WeatherBox = ({weather}) => {
   // 켈빈(Kelvin), ℃ 섭씨(Celsius), ℉ 화씨(Fahrenheit)
   let fah = ((weather?.main.temp * 9 / 5) + 32).toFixed(2);
   return (
-    <div>
+    <div className='weather-main-box'>
       <div className='box'>
         <h1>{weather?.name}</h1>
         <div className='weather-icon'></div>
