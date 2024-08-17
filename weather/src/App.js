@@ -29,8 +29,10 @@ function App() {
     getCurrentLocation();
   }, [])
 
+  let weatherTxt = (weather.weather[0].main).toLowerCase();
+
   return (
-    <div className={`wrapper clouds`}>
+    <div className={`wrapper ${weatherTxt}`}>
       <div>
         <WeatherBox weather={weather} />
         <WeatherBtn />
