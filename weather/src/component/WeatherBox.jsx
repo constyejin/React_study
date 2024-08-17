@@ -1,6 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faSun, faCloud, faUmbrella} from "@fortawesome/free-solid-svg-icons";
+// Clear, Clouds, Rain
 
 const WeatherBox = ({weather}) => {
   console.log(weather)
@@ -10,9 +9,7 @@ const WeatherBox = ({weather}) => {
     <div>
       <div className='box'>
         <h1>{weather?.name}</h1>
-        <div className='weather-icon'>
-          <FontAwesomeIcon icon={faCloud} />
-        </div>
+        <div className='weather-icon'></div>
 
         <div className='temp'>
           <p>{weather?.main.temp} ℃</p>
