@@ -61,12 +61,18 @@
 }
 
 .box:first-child {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 80%;
   padding: 60px 40px;
   background: linear-gradient(180deg, rgba(134, 134, 134, 0.5) 0%, rgba(181,181,181, .5) 47%, rgba(214, 214, 214, 0.5) 100%);
+}
+
+.city-clock {
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .city-name {
@@ -165,6 +171,10 @@
     width: 80%;
     height: 80%;
     max-width: 1200px;
+  }
+
+  .city-clock {
+    font-size: 16px;
   }
 
   .box:first-child {
