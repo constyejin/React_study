@@ -69,25 +69,25 @@ function App() {
 
   return (
     <div className={`wrapper ${weatherTxt}`}>
-      {
-        loading ? (
+      {loading ? (
+        <div>
+          <ClipLoader
+          className='loading-spinner'
+          color="#eee"
+          loading={loading}
+          size={150}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+          />
+        </div>
+        ) : !apiError ? (
           <div>
-            <ClipLoader
-            className='loading-spinner'
-            color="#eee"
-            loading={loading}
-            size={150}
-            aria-label="Loading Spinner"
-            data-testid="loader"
-            />
+            <WeatherBox weather={weather} />
+            <WeatherBtn cities={cities} setCity={setCity} city={city}/>
           </div>
         ) : (
-        <div>
-          <WeatherBox weather={weather} />
-          <WeatherBtn cities={cities} setCity={setCity} city={city}/>
-        </div>
-        ) 
-      }
+          apiError
+        )}
     </div>
   );
 }
