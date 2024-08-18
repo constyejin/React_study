@@ -8,6 +8,7 @@ import WeatherBtn from './component/WeatherBtn';
 
 function App() {
   const [weather, setWeather] = useState(null);
+  const cities = ['seoul', 'paris', 'london'];
 
   const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition((pos) => {
@@ -35,7 +36,7 @@ function App() {
     <div className={`wrapper ${weatherTxt}`}>
       <div>
         <WeatherBox weather={weather} />
-        <WeatherBtn />
+        <WeatherBtn cities={cities} />
       </div>
     </div>
   );
