@@ -8,9 +8,9 @@ import WeatherBtn from './component/WeatherBtn';
 import ClipLoader from "react-spinners/ClipLoader";
 
 function App() {
-  const [weather, setWeather] = useState(null);
-  const [city, setCity] = useState('');
   const [loading, setLoading] = useState(true);
+  const [city, setCity] = useState('');
+  const [weather, setWeather] = useState(null);
 
   const apiKey = 'ac49f1f2f69b987a0820eddf6f88027f';
   const cities = ['seoul', 'paris', 'london'];
@@ -68,7 +68,7 @@ function App() {
         ) : (
         <div>
           <WeatherBox weather={weather} />
-          <WeatherBtn cities={cities} setCity={setCity} />
+          <WeatherBtn cities={cities} setCity={setCity} city={city}/>
         </div>
         ) 
       }
