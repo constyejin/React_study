@@ -133,8 +133,23 @@
   margin-top: 30px;
 }
 
+.weather-btn-box button {
+  border: none;
+  background-color: rgba(245, 245, 245, 0.5);
+  transition: background-color 300ms ease-in-out;
+}
+
 .weather-btn-box button:not(:last-child) {
   margin-right: 8px;
+}
+
+.weather-btn-box button:hover {
+  background-color: rgba(225, 245, 254, 0.5);
+}
+
+.weather-btn-box button.active {
+  color: #fff;
+  background-color: #61acc999;
 }
 
 
