@@ -1,18 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Clock from 'react-live-clock';
-// Clear, Clouds, Rain
 
+// Clear, Clouds, Rain
 const WeatherBox = ({weather}) => {
   // 켈빈(Kelvin), ℃ 섭씨(Celsius), ℉ 화씨(Fahrenheit)
   const fah = weather && ((weather.main.temp * 9 / 5) + 32).toFixed(2);
-  // const [cityClock, ]
-
+  
   return (
     <div className='weather-main-box'>
       <div className='box'>
         <h1 className='city-name'>{weather?.name.toUpperCase()}
           <p className='city-clock'>
-            <Clock format={'HH:mm:ss'} ticking={true} timezone={'KR/Pacific'}/>
+            <Clock format={'HH:mm:ss'} ticking={true} timezone={''}/>
           </p>
         </h1>
         <div className='weather-icon'></div>

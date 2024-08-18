@@ -1,15 +1,17 @@
 import { useState, useEffect, CSSProperties } from 'react';
 
+
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import ClipLoader from 'react-spinners/ClipLoader';
 import WeatherBox from './component/WeatherBox';
 import WeatherBtn from './component/WeatherBtn';
-import ClipLoader from "react-spinners/ClipLoader";
 
 function App() {
   const [loading, setLoading] = useState(false);
   const [city, setCity] = useState('');
+  const [time, SetTime] = useState('');
   const [weather, setWeather] = useState(null);
   const [apiError, setApiError] = useState('');
 
@@ -54,6 +56,9 @@ function App() {
       setLoading(false);
     }
   }
+
+  // Rok, Europe/Paris, Europe/London
+
 
   useEffect(() => {
     if(city == '') {

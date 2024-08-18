@@ -16,7 +16,7 @@ const WeatherBtn = ({cities, setCity, city}) => {
           variant="light" 
           key={index}  
           onClick={() => setCity(item)}>
-          {item.charAt(0).toUpperCase() + item.slice(1)}
+            {item.charAt(0).toUpperCase() + item.slice(1)}
         </Button>
         ))}
     </div>
