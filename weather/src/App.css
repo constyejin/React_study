@@ -163,12 +163,12 @@
 @media screen and (max-width : 568px) {
   .weather-main-box {
     width: 80%;
-    height: 60%;
+    height: 70%;
     max-width: 1200px;
   }
 
   .box:first-child {
-    height: 86%;
+    height: 84%;
     min-height: 360px;
     padding: 40px;
   }
@@ -187,10 +187,10 @@
   }
 
   .humid p:first-child, .wind p:first-child {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .weather-btn-box {
-    margin-top: 20px;
+    margin-top: 0px;
   }
 }
