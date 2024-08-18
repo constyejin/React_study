@@ -132,6 +132,7 @@
 
 .humid p:first-child, .wind p:first-child {
   font-size: 22px;
+  font-weight: 600;
 }
 
 .weather-btn-box {
@@ -162,7 +163,7 @@
 @media screen and (max-width : 568px) {
   .weather-main-box {
     width: 80%;
-    height: 70%;
+    height: 80%;
     max-width: 1200px;
   }
 
@@ -173,8 +174,9 @@
   }
 
   .weather-icon {
-    width: 160px;
-    height: 160px;
+    margin: 20px auto;
+    width: 140px;
+    height: 140px;
   }
 
   .temp {
@@ -190,6 +192,6 @@
   }
 
   .weather-btn-box {
-    margin-top: 0px;
+    margin-top: 20px;
   }
 }
