@@ -58,7 +58,7 @@ function App() {
           <div>
             <ClipLoader
             className='loading-spinner'
-            color="#555"
+            color="#eee"
             loading={loading}
             size={150}
             aria-label="Loading Spinner"
