@@ -1,11 +1,16 @@
 import React from 'react';
-
 import { Button } from 'react-bootstrap';
 
-const WeatherBtn = () => {
+const WeatherBtn = ({cities}) => {
   return (
     <div className='weather-btn-box'>
-      <Button variant="outline-dark">Dark</Button>
+      <Button variant="outline-dark">Current Location</Button>
+      
+      {
+        cities.map((item) => {
+          return <Button variant="outline-dark">{item}</Button>
+        })
+      }
     </div>
   )
 }
