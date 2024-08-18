@@ -113,7 +113,7 @@
 
 .humid {
   position: relative;
-  flex-grow: 1;
+  width: 50%;
 }
 
 .humid::after {
@@ -128,7 +128,7 @@
 }
 
 .wind {
-  flex-grow: 1;
+  width: 50%;
 }
 
 .humid p:first-child, .wind p:first-child {
