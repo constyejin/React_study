@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 const WeatherBtn = ({cities, setCity}) => {
   return (
     <div className='weather-btn-box'>
-      <Button variant="secondary">Current Location</Button>
+      <Button variant="light" onClick={() => {}}>Current Location</Button>
       
       {
         cities.map((item, index) => (
@@ -12,7 +12,7 @@ const WeatherBtn = ({cities, setCity}) => {
             variant="light" 
             key={index}  
             onClick={() => {setCity(item)}}>
-            {item}
+            {item.charAt(0).toUpperCase() + item.slice(1)}
           </Button>
         ))
       }
