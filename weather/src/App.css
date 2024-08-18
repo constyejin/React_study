@@ -133,6 +133,11 @@
   margin-top: 30px;
 }
 
+.weather-btn-box button:not(:last-child) {
+  margin-right: 8px;
+}
+
+
 @media screen and (max-width : 568px) {
   .box:first-child {
     height: 80%;
