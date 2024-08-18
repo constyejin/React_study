@@ -180,4 +180,8 @@
   .humid p:first-child, .wind p:first-child {
     font-size: 20px;
   }
+
+  .weather-btn-box {
+    margin-top: 20px;
+  }
 }
