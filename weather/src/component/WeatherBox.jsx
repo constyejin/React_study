@@ -1,14 +1,20 @@
 import React from 'react';
+import Clock from 'react-live-clock';
 // Clear, Clouds, Rain
 
 const WeatherBox = ({weather}) => {
   // 켈빈(Kelvin), ℃ 섭씨(Celsius), ℉ 화씨(Fahrenheit)
-  let fah = weather && ((weather.main.temp * 9 / 5) + 32).toFixed(2);
+  const fah = weather && ((weather.main.temp * 9 / 5) + 32).toFixed(2);
+  // const [cityClock, ]
 
   return (
     <div className='weather-main-box'>
       <div className='box'>
-        <h1>{weather?.name.toUpperCase()}</h1>
+        <h1 className='city-name'>{weather?.name.toUpperCase()}
+          <p className='city-clock'>
+            <Clock format={'HH:mm:ss'} ticking={true} timezone={'KR/Pacific'}/>
+          </p>
+        </h1>
         <div className='weather-icon'></div>
 
         <div className='temp'>
