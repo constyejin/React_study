@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 
-const WeatherBtn = ({cities, setCity}) => {
+const WeatherBtn = ({cities, setCity, weatherBtnActive}) => {
+  console.log(weatherBtnActive == '');
   return (
     <div className='weather-btn-box'>
       <Button 
+        className={weatherBtnActive == '' ? 'active' : ''}
         variant="light" 
         onClick={() => setCity('')}>Current Location</Button>
       
