@@ -8,44 +8,60 @@ import WeatherBtn from './component/WeatherBtn';
 import ClipLoader from "react-spinners/ClipLoader";
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
+  const [apiError, setApiError] = useState('');
 
-  const apiKey = 'ac49f1f2f69b987a0820eddf6f88027f';
+  const API_KEY = process.env.REACT_APP_API_KEY;
   const cities = ['seoul', 'paris', 'london'];
+
+  const getWeatherByCurrentLocation = async(lat, lon) => {
+    try {
+      let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+      let response = await fetch(url);
+      let data = await response.json();
+
+      setWeather(data);
+      setLoading(false);
+    } catch(err) {
+      console.log(err);
+      setApiError(err.message);
+      setLoading(false);
+    }
+  }
 
   const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition((pos) => {
-      let lat = pos.coords.latitude;
-      let lon = pos.coords.longitude;
-      getWeatherByCurrentLocation(lat, lon, apiKey);
+      // let lat = pos.coords.latitude;
+      // let lon = pos.coords.longitude;
+      const {latitude, longitude} = pos.coords;
+      getWeatherByCurrentLocation(latitude, longitude);
     })
   }
 
-  const getWeatherByCurrentLocation = async(lat, lon, apiKey) => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-    setLoading(true);
-    let response = await fetch(url);
-    let data = await response.json();
-    setWeather(data);
-    setLoading(false);
-  }
-
   const getWeatherByCity = async() => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
-    setLoading(true);
-    let response = await fetch(url);
-    let data = await response.json();
-    setWeather(data);
-    setLoading(false)
+    try {
+      let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+      let response = await fetch(url);
+      let data = await response.json();
+      
+      setWeather(data);
+      setLoading(false)
+    } catch(err) {
+      console.log(err);
+      setApiError(err.message);
+      setLoading(false);
+    }
   }
 
   useEffect(() => {
     if(city == '') {
+      setLoading(true);
       getCurrentLocation();
     } else {
-      getWeatherByCity()
+      setLoading(true);
+      getWeatherByCity();
     }
   }, [city])
 
