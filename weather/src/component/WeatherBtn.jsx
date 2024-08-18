@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 
-const WeatherBtn = ({cities, setCity, weatherBtnActive}) => {
-  console.log(weatherBtnActive == '');
+const WeatherBtn = ({cities, setCity, city}) => {
+  
   return (
     <div className='weather-btn-box'>
       <Button 
-        className={weatherBtnActive == '' ? 'active' : ''}
+        className={city == '' ? 'active' : ''}
         variant="light" 
         onClick={() => setCity('')}>Current Location</Button>
       
       {cities.map((item, index) => (
         <Button 
+          className={city == item ? 'active' : ''}
           variant="light" 
           key={index}  
           onClick={() => setCity(item)}>
