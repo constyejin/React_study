@@ -1,6 +1,5 @@
 import { useState, useEffect, CSSProperties } from 'react';
 
-
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -11,9 +10,14 @@ import WeatherBtn from './component/WeatherBtn';
 function App() {
   const [loading, setLoading] = useState(false);
   const [city, setCity] = useState('');
-  const [time, SetTime] = useState('');
+  const [time, setTime] = useState('');
   const [weather, setWeather] = useState(null);
   const [apiError, setApiError] = useState('');
+
+
+  // const cityHour = new Date().toLocaleTimeString('en-US', { timeZone: time && time, hour: '2-digit', hour12: false });
+  // console.log(cityHour)
+  
 
   const API_KEY = process.env.REACT_APP_API_KEY;
   const cities = ['seoul', 'paris', 'london'];
@@ -59,12 +63,16 @@ function App() {
 
   // Rok, Europe/Paris, Europe/London
 
-
   useEffect(() => {
     if(city == '') {
+      setTime('Rok');
       setLoading(true);
       getCurrentLocation();
     } else {
+      if(city === 'seoul') setTime('Rok');
+      if(city === 'paris') setTime('Europe/Paris');
+      if(city === 'london') setTime('Europe/London');
+
       setLoading(true);
       getWeatherByCity();
     }
@@ -73,7 +81,7 @@ function App() {
   let weatherTxt = weather?.weather[0].main.toLowerCase();
 
   return (
-    <div className={`wrapper ${weatherTxt}`}>
+    <div className={`wrapper ${weatherTxt} morning`}>
       {loading ? (
         <div>
           <ClipLoader
@@ -87,7 +95,7 @@ function App() {
         </div>
         ) : !apiError ? (
           <div>
-            <WeatherBox weather={weather} />
+            <WeatherBox weather={weather} time={time} />
             <WeatherBtn cities={cities} setCity={setCity} city={city}/>
           </div>
         ) : (
