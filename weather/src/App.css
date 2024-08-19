@@ -19,6 +19,14 @@
   background-image: url('https://img.freepik.com/premium-photo/blue-sky-background-with-clouds-clouds-clear-day_522160-1095.jpg');
 }
 
+.wrapper.clear.morning {
+  background-image: url('https://img.freepik.com/premium-photo/blue-sky-background-with-clouds-clouds-clear-day_522160-1095.jpg');
+}
+
+.wrapper.clear.night {
+  background-image: url('https://img.freepik.com/premium-photo/forest-night-with-pine-trees-dark-blue-sky-with-many-stars_104337-3830.jpg');
+}
+
 .wrapper.clear .weather-icon {
   background-image: url(./assets/icons/clear.svg);
 }
