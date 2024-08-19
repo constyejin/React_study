@@ -49,12 +49,12 @@ Link : <a href="https://zzopenweathermap.org/api">https://zzopenweathermap.org/a
 4. await로 fetch와 json() method를 기다렸다 반환한다.
 5. try - catch로 에러 처리
 
-<br>
-  <code>
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
-    let response = await fetch(url);
-    let data = await response.json();
-  </code>
+
+<code>
+let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+let response = await fetch(url);
+let data = await response.json();
+</code>
 
 <br>
 
