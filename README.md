@@ -3,7 +3,7 @@
 
 --- 
 
-<a href='https://zzopenweathermap.org/api'>Weather-App 결과물</a>
+<a href='https://ingkejin-weather.netlify.app/'>Weather-App 결과물</a>
 <br>
 <a href='https://github.com/constyejin/React_study/tree/main/weather'>프로젝트 설명</a>
 
