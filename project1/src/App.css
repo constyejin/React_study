@@ -163,8 +163,9 @@ button {
   }
 
   .box img {
-    width: 60%;
+    width: 68%;
     height: 240px;
+    margin: 0 auto;
   }
 
   .choice-btn img {
