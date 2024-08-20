@@ -84,6 +84,10 @@ Rock Scissors Paper Project
   }, [score])
 ```
 
+---
 
+<h3>구현중인 기능</h3>
+
+- 사용자가 10초 내에 아이템을 선택하지 않을 시 랜덤으로 선택되게 한다. => setInterval(), useEffect()
 
 
