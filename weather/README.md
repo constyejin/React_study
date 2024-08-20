@@ -50,11 +50,11 @@ Link : <a href="https://zzopenweathermap.org/api">https://zzopenweathermap.org/a
 5. try - catch로 에러 처리
 
 
-<code>
-let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
-let response = await fetch(url);
-let data = await response.json();
-</code>
+```
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+  let response = await fetch(url);
+  let data = await response.json();
+```
 
 <br>
 
