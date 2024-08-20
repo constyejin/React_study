@@ -35,19 +35,19 @@ Rock Scissors Paper Project
 
 - 컴퓨터는 랜덤으로 아이템 중 하나 선택한다. (Object.keys()를 이용하여 key값을 배열로 만든 후 index로 랜덤 값 선택)
 
-<code>
+```
   const randomChoice = () => {
     const itemArr = Object.keys(choice);
     const randomItem = Math.floor(Math.random() * itemArr.length);
     const userRandom = choice[itemArr[randomItem]].name.toLowerCase();
-    
+
     return choice[itemArr[randomItem]]; 
   }
-</code>
+```
 
 - if문과 삼항연산자로 사용자 값과 컴퓨터 값을 비교하여 승패를 결정한다.
 
-<code>
+```
   if(you === computer) {
     return "TIE";
   } else if(you === "Scissors") {
@@ -57,17 +57,17 @@ Rock Scissors Paper Project
   } else if(you === "Paper") {
     return computer === "Rock" ? "WIN" : "LOSE";
   }
-</code>
+```
 
 - 사용자 & 컴퓨터 점수 객체 생성 & 로컬스토리지에 점수 객체 반영 후 가져오기
 
 - 삼항 연산자로 로컬스토리지에 점수값이 없을 경우 0을 보여주고, 아닐 경우 로컬스토리지에 저장된 점수 값을 보여준다.
 
-<code>
+```
   const [score, setScore] = useState(() => {
     return !JSON.parse(localStorage.getItem('score')) ? {userScore : 0, comScore : 0} : JSON.parse(localStorage.getItem('score'));
   })
-</code>
+```
 
 <br>
 
@@ -78,11 +78,11 @@ Rock Scissors Paper Project
 
 - useEffect로 score값이 바뀔 때 마다 로컬스토리지에서 값을 가져온다.
 
-<code>
+```
   useEffect(() => {
     localStorage.setItem('score', JSON.stringify(score))
   }, [score])
-</code>
+```
 
 
 
