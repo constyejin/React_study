@@ -12,7 +12,7 @@ Weather App Project
 
 <br>
 
-<h3>Weather AP</h3>
+<h3>Weather API</h3>
 Link : <a href="https://zzopenweathermap.org/api">https://zzopenweathermap.org/api</a>
 
 ---
