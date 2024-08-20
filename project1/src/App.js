@@ -50,7 +50,6 @@ function App() {
 
 
   const play = (userChoice) => {
-    console.log(choice[userChoice]);
     setUserSelect(choice[userChoice]);
     const comChoice = randomChoice();
     setComSelect(comChoice);
@@ -130,8 +129,20 @@ function App() {
   // }, [comScore]);
 
 
+  // 1. useEffect 두 개의 매개변수 중 배열 안에 state가 없으면 =>  componentDidMount()
+  // 2. useEffect 두 개의 매개변수 중 배열 안에 state가 있으면 =>  componentDidMount() + componentDidUpdate()
+  // 1은 render 된 다음 한 번 실행, 2는 배열 안 값이 바뀔 때 마다 실행
+  useEffect(() => {
+    console.log("useEffect 1 Firee")
+  }, [])
+
+  useEffect(() => {
+    console.log('useEffect 2')
+  }, [userSelect])
+
   return (
     <div className='wrapper'>
+    {console.log('render')}
       <Score score={score} reset={reset} count={count}/>
 
       <div className="main-box">
