@@ -1,14 +1,15 @@
 .gnb {
-  @include flexbox(between, center);
-  @include text-style-14;
-
-  position: absolute;
-  width: 100%;
   height: 120px;
-  padding: 20px 40px;
 
-  .row {
-      border : 2px solid red;
+  &-wrapper {
+    @include flexbox(between, center);
+    @include text-style-14;
+
+    position: fixed;
+    z-index: $gnb-level;
+    width: 100%;
+    height: 120px;
+    padding: 20px 40px;
   }
 
   .logo {
