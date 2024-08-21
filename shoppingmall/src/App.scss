@@ -7,7 +7,9 @@
 @import './scss/base/reset';
 @import './scss/base/globals';
 
-@import './scss/components/navbar';
-@import './scss/components/home';
+@import './scss/mixins/flexbox';
+
 
 @import './scss/layouts/grid';
+@import './scss/layouts/gnb';
+@import './scss/layouts/home';
