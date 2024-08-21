@@ -53,6 +53,14 @@ npm install --save @fortawesome/react-fontawesome
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 ```
 
+<br>
+
+<a href='https://www.npmjs.com/package/json-server'>Json-server</a>
+
+```
+npm install json-server
+```
+
 
 1. 전체 상품, 상품 상세, 로그인 페이지
 2. 전체 상품 페이지에서는 모든 상품을 볼 수 있다.
