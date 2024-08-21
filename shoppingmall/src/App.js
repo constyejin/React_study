@@ -1,4 +1,4 @@
-import './App.css';
+import './assets/scss/main.scss';
 import { Routes, Route } from 'react-router-dom';
 
 import ProductAll from './page/ProductAll';
