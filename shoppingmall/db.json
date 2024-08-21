@@ -1,0 +1,121 @@
+{
+  "products":[
+    {
+      "id": 0,
+      "img": "https://cdn.imweb.me/thumbnail/20240819/040a127f59176.jpg",
+      "title": "ARTIST LABEL VELVET BIG SCRUNCHIE (BLACK)",
+      "price": "28000",
+      "choice": true,
+      "new": true,
+      "size": ["FREE"]
+    },
+    {
+      "id": 1,
+      "img": "https://cdn.imweb.me/thumbnail/20240819/91d257bbe118b.jpg",
+      "title": "ARTIST LABEL VELVET BIG SCRUNCHIE (BROWN)",
+      "price": "28000",
+      "choice": true,
+      "new": true,
+      "size": ["FREE"]
+    },
+    {
+      "id": 2,
+      "img": "https://cdn.imweb.me/thumbnail/20240819/290982f9d590d.jpg",
+      "title": "ARTIST VELVET RIBBON SCRUNCHIE (BLACK)",
+      "price": "28000",
+      "choice": false,
+      "new": false,
+      "size": ["FREE"]
+    },
+    {
+      "id": 3,
+      "img": "https://cdn.imweb.me/thumbnail/20240819/72611365d9d94.jpg",
+      "title": "ARTIST VELVET RIBBON SCRUNCHIE (BROWN)",
+      "price": "28000",
+      "choice": false,
+      "new": false,
+      "size": ["FREE"]
+    },
+    {
+      "id": 4,
+      "img": "https://cdn.imweb.me/thumbnail/20240819/a01120dc68508.jpg",
+      "title": "ROMANTIC TIERED MINI SKIRT (WHITE)",
+      "price": "128000",
+      "choice": false,
+      "new": false,
+      "size": ["FREE"]
+    },
+    {
+      "id": 5,
+      "img": "https://cdn.imweb.me/thumbnail/20240801/4e86d6304500c.jpg",
+      "title": "TWIST BOLD SILVER RING (SILVER 925)",
+      "price": "98000",
+      "choice": false,
+      "new": false,
+      "size": [13, 14, 15, 16, 17, 18, 19, 20, 21]
+    },
+    {
+      "id": 6,
+      "img": "https://cdn.imweb.me/thumbnail/20240801/76965ee690494.jpg",
+      "title": "VINTAGE TEDDYBEAR SILVER NECKLACE (SILVER 925)",
+      "price": "328000",
+      "choice": false,
+      "new": false,
+      "size": ["FREE"]
+    },
+    {
+      "id": 7,
+      "img": "https://cdn.imweb.me/thumbnail/20240812/01c277409a712.jpg",
+      "title": "OLD SCHOOL CHECK SHIRTS (RED)",
+      "price": "128000",
+      "choice": false,
+      "new": false,
+      "size": ["FREE"]
+    },
+    {
+      "id": 8,
+      "img": "https://cdn.imweb.me/thumbnail/20240812/769812802ad8c.jpg",
+      "title": "OLD SCHOOL CHECK SHIRTS (NAVY)",
+      "price": "128000",
+      "choice": false,
+      "new": false,
+      "size": ["FREE"]
+    },
+    {
+      "id": 9,
+      "img": "https://cdn.imweb.me/thumbnail/20240709/7bb062a4c573e.jpg",
+      "title": "ARTIST TWILL SHORTS (WHITE)",
+      "price": "168000",
+      "choice": false,
+      "new": false,
+      "size": ["1SIZE", "2SIZE"]
+    },
+    {
+      "id": 10,
+      "img": "https://cdn.imweb.me/thumbnail/20240709/20280e3f30630.jpg",
+      "title": "ARTIST TWILL SHORTS (BLACK)",
+      "price": "168000",
+      "choice": false,
+      "new": false,
+      "size": ["1SIZE", "2SIZE"]
+    },
+    {
+      "id": 11,
+      "img": "https://cdn.imweb.me/thumbnail/20240603/dcd9bdb360c62.jpg",
+      "title": "MATISSE STAFF T-SHIRTS (WHITE)",
+      "price": "79000",
+      "choice": false,
+      "new": false,
+      "size": ["1SIZE", "2SIZE"]
+    },
+    {
+      "id": 12,
+      "img": "https://cdn.imweb.me/thumbnail/20240607/d559fcea4307b.jpg",
+      "title": "MATISSE STAFF T-SHIRTS (BLACK)",
+      "price": "79000",
+      "choice": false,
+      "new": false,
+      "size": ["1SIZE", "2SIZE"]
+    }
+  ]
+}
