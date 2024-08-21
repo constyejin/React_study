@@ -1,0 +1,42 @@
+.gnb {
+  @include flexbox(between, center);
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  padding: 20px 40px;
+
+  .row {
+      border : 2px solid red;
+  }
+
+  .logo {
+    @include pos-center;
+
+    img {
+      width: 200px;
+      height: 64px;
+      object-fit: contain;
+    }
+  }
+
+  &-menu-list,
+  &-join-list {
+    @include flexbox;
+
+    a {
+      padding: 0 8px;
+      transition: opacity 300ms ease-in-out;
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+
+  .login-box {
+    display: flex;
+    justify-content: end;
+    padding: 20px;
+  }
+
+}
