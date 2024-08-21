@@ -32,7 +32,13 @@ root.render(
 );
 ```
 
+<a href='https://docs.fontawesome.com/v5/web/use-with/react'>React | Font Awesome</a>
 
+```
+npm i --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome
+```
 
 
 1. 전체 상품, 상품 상세, 로그인 페이지
