@@ -17,19 +17,22 @@ const Gnb = () => {
         </Link>
       </h1>
 
-      <ul className='gnb-menu-list'>
-        {
-          menuList.map((menu, index) => {
-            return (
-              <li key={index}>
-                <Link to={menu.split(' ').join('')}>
-                  {menu.toUpperCase()}
-                </Link>
-              </li>
-            )
-          })
-        }
-      </ul>
+      <nav>
+        <h2 className='visually-hidden'>메뉴</h2>
+        <ul className='gnb-menu-list'>
+          {
+            menuList.map((menu, index) => {
+              return (
+                <li key={index}>
+                  <Link to={menu.split(' ').join('')}>
+                    {menu.toUpperCase()}
+                  </Link>
+                </li>
+              )
+            })
+          }
+        </ul>
+      </nav>
 
       <ul className='gnb-join-list'>
         {
