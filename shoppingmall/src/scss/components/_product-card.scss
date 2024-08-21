@@ -1,3 +1,13 @@
 .product-card {
   text-align: center;
+
+  &-info {
+    padding: 14px 0 20px;
+  }
+
+  &-price {
+    @include text-style-16();
+    font-weight: 300;
+    margin-top: 8px;
+  }
 }
