@@ -40,6 +40,11 @@ npm install --save @fortawesome/free-solid-svg-icons
 npm install --save @fortawesome/react-fontawesome
 ```
 
+```
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+<FontAwesomeIcon icon={faCoffee} />
+```
+
 
 1. 전체 상품, 상품 상세, 로그인 페이지
 2. 전체 상품 페이지에서는 모든 상품을 볼 수 있다.
