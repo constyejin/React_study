@@ -47,6 +47,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 <br>
 Adding Additional Styles
+
 ```
 npm install --save @fortawesome/react-fontawesome
 import { faUser } from '@fortawesome/free-regular-svg-icons';
