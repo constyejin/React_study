@@ -1,4 +1,4 @@
-// constants -> base -> mixins -> modules
+// constants -> base -> mixins -> modules -> components -> layout
 
 @import './scss/constants/typograpy';
 @import './scss/constants/breakpoint';
@@ -9,3 +9,5 @@
 
 @import './scss/components/navbar';
 @import './scss/components/home';
+
+@import './scss/layouts/grid';
