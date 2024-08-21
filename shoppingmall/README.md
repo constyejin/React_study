@@ -63,9 +63,11 @@ npm install -g json-server
 
 Start JSON Server
 ```
-json--server --watch db.json
+json-server --watch db.json --port 4000
 ```
+5000번은 맥북에서 이미 사용되고 있는 넘버라 5000번 외에 다른 숫자를 사용해야 한다. 
 
+<br>
 RESTful API규칙에 맞춰서 API호출을 하면 JSON server가 알아서 데이터를 보내준다.
 
 
