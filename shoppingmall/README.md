@@ -58,7 +58,7 @@ import { faUser } from '@fortawesome/free-regular-svg-icons';
 <a href='https://www.npmjs.com/package/json-server'>Json-server</a>
 
 ```
-npm install json-server
+npm install -g json-server
 ```
 
 
