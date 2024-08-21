@@ -11,17 +11,31 @@ const Gnb = () => {
 
   return (
     <header className='gnb'>
-      <h1 className='logo'>
-        <Link to='/'>
-          <img src={logo} alt='logo' />
-        </Link>
-      </h1>
-
-      <nav>
-        <h2 className='visually-hidden'>메뉴</h2>
-        <ul className='gnb-menu-list'>
+      <div className='gnb-wrapper'>
+        <h1 className='logo'>
+          <Link to='/'>
+            <img src={logo} alt='logo' />
+          </Link>
+        </h1>
+        <nav>
+          <h2 className='visually-hidden'>메뉴</h2>
+          <ul className='gnb-menu-list'>
+            {
+              menuList.map((menu, index) => {
+                return (
+                  <li key={index}>
+                    <Link to={menu.split(' ').join('')}>
+                      {menu.toUpperCase()}
+                    </Link>
+                  </li>
+                )
+              })
+            }
+          </ul>
+        </nav>
+        <ul className='gnb-join-list'>
           {
-            menuList.map((menu, index) => {
+            joinList.map((menu, index) => {
               return (
                 <li key={index}>
                   <Link to={menu.split(' ').join('')}>
@@ -32,21 +46,7 @@ const Gnb = () => {
             })
           }
         </ul>
-      </nav>
-
-      <ul className='gnb-join-list'>
-        {
-          joinList.map((menu, index) => {
-            return (
-              <li key={index}>
-                <Link to={menu.split(' ').join('')}>
-                  {menu.toUpperCase()}
-                </Link>
-              </li>
-            )
-          })
-        }
-      </ul>
+      </div>
     </header>
   )
 }
