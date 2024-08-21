@@ -61,6 +61,13 @@ import { faUser } from '@fortawesome/free-regular-svg-icons';
 npm install -g json-server
 ```
 
+Start JSON Server
+```
+json--server --watch db.json
+```
+
+RESTful API규칙에 맞춰서 API호출을 하면 JSON server가 알아서 데이터를 보내준다.
+
 
 1. 전체 상품, 상품 상세, 로그인 페이지
 2. 전체 상품 페이지에서는 모든 상품을 볼 수 있다.
