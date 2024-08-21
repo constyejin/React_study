@@ -1,6 +1,6 @@
 Shopping Mall Project
 -
-<a href='https://ingkejin-shopping.netlify.app/'>프로젝트 링크</a>
+<a href='https://ingkejin-shoppingmall.netlify.app/'>프로젝트 링크</a>
 
 <div>
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=Static&logo=HTML5&logoColor=white&logoWidth=10&logoheight=20">
