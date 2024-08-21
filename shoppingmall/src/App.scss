@@ -1,8 +1,11 @@
+// constants -> base -> mixins -> modules
+
 @import './scss/constants/typograpy';
 @import './scss/constants/breakpoint';
 
 @import './scss/base/nomalize';
 @import './scss/base/reset';
+@import './scss/base/globals';
 
 @import './scss/components/navbar';
 @import './scss/components/home';
