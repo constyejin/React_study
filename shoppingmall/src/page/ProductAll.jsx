@@ -10,6 +10,7 @@ const ProductAll = () => {
     let response = await fetch(url);
     let data = await response.json();
     setProductList(data);
+    console.log(data)
   }
 
   useEffect(() => {
@@ -17,26 +18,19 @@ const ProductAll = () => {
   }, []);
 
   return (
-    <div>
-      {/* <Container>
-        <Row>
-
-        </Row>
-      </Container> */}
-      <div className="container">
-        <div className="row"></div>
-          <div className="col-sm-4">
-            <div className="product-card-list">
-              {
-                productList.map((item, index) => {
-                  return (
-                    <ProductCard item={item} key={index} />
-                  )
-                })
-              }
-            </div>
+    <div className="container">
+      <div className="row"></div>
+        <div className="col-lg-12">
+          <div className="product-card-list">
+            {
+              productList.map((item, index) => {
+                return (
+                  <ProductCard item={item} key={index} />
+                )
+              })
+            }
           </div>
-      </div>
+        </div>
     </div>
   )
 }
