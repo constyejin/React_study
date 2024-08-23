@@ -2,11 +2,21 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Login = ({ setAuthenticate }) => {
   const navigate = useNavigate();
+
   const loginUser = (e) => {
+    const email = document.querySelector('.login-email input').value;
+    const pw = document.querySelector('.login-pw input').value;
+    const alert = document.querySelector('.login-alert');
     e.preventDefault();
-    setAuthenticate(true);
-    navigate('/');
+
+    if(email !== '' && pw !== '') {
+      setAuthenticate(true);
+      navigate('/');
+    } else {
+      alert.style.display = 'block'
+    }
   };
+
 
   return (
     <div className='login'>
@@ -28,12 +38,14 @@ const Login = ({ setAuthenticate }) => {
 
       <form onSubmit={loginUser} action="" className='login-box'>
         <div className='login-input-box login-email'>
-          <input type="text" placeholder='이메일'/>
+          <input type="text" placeholder='아이디'/>
         </div>
 
         <div className='login-input-box login-pw'>
           <input type="password" placeholder='비밀번호'/>
         </div>
+
+       <span className='login-alert'>아이디 및 비밀번호를 입력하세요.</span>
 
         <div className='login-stay'>
           <label>
