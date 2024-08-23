@@ -1,13 +1,41 @@
+.product-card-list {
+  @include flexbox(between, top);
+  flex-wrap: wrap;
+}
+
 .product-card {
+  width: calc((100% / 4) - 20px);
   text-align: center;
+
+  &-img {
+    img {
+      width: 100%;
+    }
+  }
 
   &-info {
     padding: 14px 0 20px;
+  }
+
+  &-title {
+    margin-bottom: 0;
   }
 
   &-price {
     @include text-style-16();
     font-weight: 300;
     margin-top: 8px;
+  }
+}
+
+@include responsive(T) {
+  .product-card {
+    width: calc((100% / 2) - 20px);
+  }
+}
+
+@include responsive(M) {
+  .product-card {
+    width: calc(100%);
   }
 }
