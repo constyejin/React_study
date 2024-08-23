@@ -3,6 +3,7 @@
     {
       "id": 0,
       "img": "https://cdn.imweb.me/thumbnail/20240819/040a127f59176.jpg",
+      "img-hover" : "https://cdn.imweb.me/thumbnail/20240819/9ce773d25a29e.jpg",
       "title": "ARTIST LABEL VELVET BIG SCRUNCHIE (BLACK)",
       "price": "28000",
       "size": ["FREE"]
@@ -10,6 +11,7 @@
     {
       "id": 1,
       "img": "https://cdn.imweb.me/thumbnail/20240819/91d257bbe118b.jpg",
+      "img-hover" : "https://cdn.imweb.me/thumbnail/20240819/b0309741d4a11.jpg",
       "title": "ARTIST LABEL VELVET BIG SCRUNCHIE (BROWN)",
       "price": "28000",
       "size": ["FREE"]
@@ -17,6 +19,7 @@
     {
       "id": 2,
       "img": "https://cdn.imweb.me/thumbnail/20240819/290982f9d590d.jpg",
+      "img-hover" : "https://cdn.imweb.me/thumbnail/20240819/99d9f9969dbc1.jpg",
       "title": "ARTIST VELVET RIBBON SCRUNCHIE (BLACK)",
       "price": "28000",
       "size": ["FREE"]
@@ -24,6 +27,7 @@
     {
       "id": 3,
       "img": "https://cdn.imweb.me/thumbnail/20240819/72611365d9d94.jpg",
+      "img-hover" : "https://cdn.imweb.me/thumbnail/20240819/83f4701f5d78c.jpg",
       "title": "ARTIST VELVET RIBBON SCRUNCHIE (BROWN)",
       "price": "28000",
       "size": ["FREE"]
@@ -31,6 +35,7 @@
     {
       "id": 4,
       "img": "https://cdn.imweb.me/thumbnail/20240819/a01120dc68508.jpg",
+      "img-hover" : "https://cdn.imweb.me/thumbnail/20240819/e7b7920724a64.jpgå",
       "title": "ROMANTIC TIERED MINI SKIRT (WHITE)",
       "price": "128000",
       "size": ["FREE"]
@@ -38,6 +43,7 @@
     {
       "id": 5,
       "img": "https://cdn.imweb.me/thumbnail/20240801/4e86d6304500c.jpg",
+      "img-hover" : "https://cdn.imweb.me/thumbnail/20240801/ece7963e22fa9.jpg",
       "title": "TWIST BOLD SILVER RING (SILVER 925)",
       "price": "98000",
       "size": [13, 14, 15, 16, 17, 18, 19, 20, 21]
@@ -45,6 +51,7 @@
     {
       "id": 6,
       "img": "https://cdn.imweb.me/thumbnail/20240801/76965ee690494.jpg",
+      "img-hover" : "https://cdn.imweb.me/thumbnail/20240801/0d44342026bff.jpg",
       "title": "VINTAGE TEDDYBEAR SILVER NECKLACE (SILVER 925)",
       "price": "328000",
       "size": ["FREE"]
@@ -52,6 +59,7 @@
     {
       "id": 7,
       "img": "https://cdn.imweb.me/thumbnail/20240812/01c277409a712.jpg",
+      "img-hover" : "https://cdn.imweb.me/thumbnail/20240813/4f8c7d24b5f50.jpg",
       "title": "OLD SCHOOL CHECK SHIRTS (RED)",
       "price": "128000",
       "size": ["FREE"]
@@ -59,6 +67,7 @@
     {
       "id": 8,
       "img": "https://cdn.imweb.me/thumbnail/20240812/769812802ad8c.jpg",
+      "img-hover" : "https://cdn.imweb.me/thumbnail/20240813/2d81ed9417d1b.jpg",
       "title": "OLD SCHOOL CHECK SHIRTS (NAVY)",
       "price": "128000",
       "size": ["FREE"]
@@ -66,6 +75,7 @@
     {
       "id": 9,
       "img": "https://cdn.imweb.me/thumbnail/20240709/7bb062a4c573e.jpg",
+      "img-hover" : "https://cdn.imweb.me/thumbnail/20240709/c273fbd41738a.jpg",
       "title": "ARTIST TWILL SHORTS (WHITE)",
       "price": "168000",
       "size": ["1SIZE", "2SIZE"]
@@ -73,6 +83,7 @@
     {
       "id": 10,
       "img": "https://cdn.imweb.me/thumbnail/20240709/20280e3f30630.jpg",
+      "img-hover" : "https://cdn.imweb.me/thumbnail/20240709/f158a01cfe320.jpg",
       "title": "ARTIST TWILL SHORTS (BLACK)",
       "price": "168000",
       "size": ["1SIZE", "2SIZE"]
@@ -80,6 +91,7 @@
     {
       "id": 11,
       "img": "https://cdn.imweb.me/thumbnail/20240603/dcd9bdb360c62.jpg",
+      "img-hover" : "https://cdn.imweb.me/thumbnail/20240603/a007f27ce7f54.jpg",
       "title": "MATISSE STAFF T-SHIRTS (WHITE)",
       "price": "79000",
       "size": ["1SIZE", "2SIZE"]
@@ -87,6 +99,7 @@
     {
       "id": 12,
       "img": "https://cdn.imweb.me/thumbnail/20240607/d559fcea4307b.jpg",
+      "img-hover" : "https://cdn.imweb.me/thumbnail/20240607/9630a70af8b97.jpg",
       "title": "MATISSE STAFF T-SHIRTS (BLACK)",
       "price": "79000",
       "size": ["1SIZE", "2SIZE"]
