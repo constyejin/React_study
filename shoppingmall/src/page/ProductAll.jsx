@@ -6,11 +6,11 @@ const ProductAll = () => {
   const [productList, setProductList] = useState([]);
 
   const getProducts = async () => {
-    let url = `my-json-server.typicode.com/constyejin/react_study/shoppingmall`;
+    let url = `my-json-server.typicode.com/constyejin/React_study/shoppingmall`;
     let response = await fetch(url);
     let data = await response.json();
     setProductList(data);
-    console.log(data)
+    console.log(data);
   }
 
   useEffect(() => {
