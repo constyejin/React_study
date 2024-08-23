@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-regular-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import logo from '../assets/images/logo.png';
 
@@ -9,19 +9,55 @@ const Gnb = ( {authenticate} ) => {
   const menuList = ['shop', 'archive', 'q&a', 'location'];
   const joinList = [authenticate == true ? 'logout' : 'login', 'cart', 'search'];
 
+  const sidebarOpen = () => {
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.querySelector('.overlay');
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
+  }
+  
+  const sidebarClose = () => {
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.querySelector('.overlay');
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+  }
+
+
   return (
-    <header className='gnb'>
-      <div className='gnb-wrapper'>
-        <h1 className='logo'>
-          <Link to='/'>
-            <img src={logo} alt='logo' />
-          </Link>
-        </h1>
-        <nav>
-          <h2 className='visually-hidden'>메뉴</h2>
-          <ul className='gnb-menu-list'>
+    <>
+      <header className='gnb'>
+        <div className='gnb-wrapper'>
+          <h1 className='logo'>
+            <Link to='/'>
+              <img src={logo} alt='logo' />
+            </Link>
+          </h1>
+
+          <div onClick={sidebarOpen} className='sidebar-btn lg-hidden'>
+            <FontAwesomeIcon icon={faBars} />
+          </div>
+
+          <nav className='lg-only'>
+            <h2 className='visually-hidden'>메뉴</h2>
+            <ul className='gnb-menu-list'>
+              {
+                menuList.map((menu, index) => {
+                  return (
+                    <li key={index}>
+                      <Link to={menu.split(' ').join('')}>
+                        {menu.toUpperCase()}
+                      </Link>
+                    </li>
+                  )
+                })
+              }
+            </ul>
+          </nav>
+
+          <ul className='gnb-join-list lg-only'>
             {
-              menuList.map((menu, index) => {
+              joinList.map((menu, index) => {
                 return (
                   <li key={index}>
                     <Link to={menu.split(' ').join('')}>
@@ -32,8 +68,11 @@ const Gnb = ( {authenticate} ) => {
               })
             }
           </ul>
-        </nav>
-        <ul className='gnb-join-list'>
+        </div>
+      </header>
+
+      <aside className='sidebar lg-hidden'>
+        <ul>
           {
             joinList.map((menu, index) => {
               return (
@@ -46,8 +85,24 @@ const Gnb = ( {authenticate} ) => {
             })
           }
         </ul>
-      </div>
-    </header>
+
+        <ul>
+          {
+            menuList.map((menu, index) => {
+              return (
+                <li key={index}>
+                  <Link to={menu.split(' ').join('')}>
+                    {menu.toUpperCase()}
+                  </Link>
+                </li>
+              )
+            })
+          }
+        </ul>
+      </aside>
+
+      <div onClick={sidebarClose} className="overlay"></div>
+    </>
   )
 }
 
