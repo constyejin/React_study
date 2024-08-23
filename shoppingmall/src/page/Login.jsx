@@ -1,7 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-const Login = () => {
+const Login = ({ setAuthenticate }) => {
+  const navigate = useNavigate();
+  const loginUser = (e) => {
+    e.preventDefault();
+    setAuthenticate(true);
+    navigate('/');
+  };
+
   return (
     <div className='login'>
       {/* <div className='login-naver'>
@@ -20,7 +26,7 @@ const Login = () => {
         <div className='line'></div>
       </div> */}
 
-      <form action="" className='login-box'>
+      <form onSubmit={loginUser} action="" className='login-box'>
         <div className='login-input-box login-email'>
           <input type="text" placeholder='이메일'/>
         </div>
