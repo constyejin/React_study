@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+// import { Container, Row, Col } from 'react-bootstrap';
 import ProductCard from '../component/ProductCard';
 
 const ProductAll = () => {
@@ -18,19 +18,25 @@ const ProductAll = () => {
 
   return (
     <div>
-      <Container>
+      {/* <Container>
         <Row>
-          {
-            productList.map((item) => {
-              return (
-                <Col lg={3}>
-                  <ProductCard item={item} />
-                </Col>
-              )
-            })
-          }
+
         </Row>
-      </Container>
+      </Container> */}
+      <div className="container">
+        <div className="row"></div>
+          <div className="col-sm-4">
+            <div className="product-card-list">
+              {
+                productList.map((item, index) => {
+                  return (
+                    <ProductCard item={item} key={index} />
+                  )
+                })
+              }
+            </div>
+          </div>
+      </div>
     </div>
   )
 }
