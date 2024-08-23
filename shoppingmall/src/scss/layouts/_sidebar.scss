@@ -1,3 +1,41 @@
 .sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $sidebar-level;
+  transform: translateX(-300px);
+  width: 300px;
+  height: 100vh;
+  padding: 40px 0;
+  background-color: #fff;
+  transition: transform 300ms ease-in-out;
+    
+  &-btn {
+    position: absolute;
+    right: 20px;
+    font-size: 22px;
+    cursor: pointer;
+  }
 
+  &.active {
+    transform: translateX(0);
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: $overlay-level;
+  background-color: rgba(0, 0, 0, .8);
+  transition: opacity 300ms ease-in-out;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
 }
