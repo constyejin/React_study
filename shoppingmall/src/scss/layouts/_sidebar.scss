@@ -11,7 +11,7 @@
   transition: transform 300ms ease-in-out;
     
   &-btn {
-    position: absolute;
+    @include pos-center-y;
     right: 20px;
     font-size: 22px;
     cursor: pointer;
