@@ -1,7 +1,8 @@
 import React from 'react'
 
 const ProductCard = ({ item }) => {
-  console.log(item);
+  const price = item?.price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");;
+
   return (
     <div className='product-card'>
       <div className='product-card-img'>
@@ -9,8 +10,8 @@ const ProductCard = ({ item }) => {
       </div>
 
       <div className='product-card-info'>
-        <h4>{item?.title}</h4>
-        <p className='product-card-price'>{item?.price}원</p>
+        <p className='product-card-title'>{item?.title}</p>
+        <p className='product-card-price'>{price} ₩</p>
       </div>
     </div>
   )
