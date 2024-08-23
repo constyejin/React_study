@@ -36,7 +36,7 @@ const Login = () => {
           </label>
         </div>
 
-        <button type='button' className='login-btn'>로그인</button>
+        <button type='submit' className='login-btn'>로그인</button>
       </form>
       
       <div className='register-find'>
