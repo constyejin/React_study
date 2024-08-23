@@ -1,5 +1,6 @@
 .gnb {
-  height: 120px;
+  position: relative;
+  height: $gnb-height-lg;
 
   &-wrapper {
     @include flexbox(between, center);
@@ -8,16 +9,18 @@
     position: fixed;
     z-index: $gnb-level;
     width: 100%;
-    height: 120px;
+    height: $gnb-height-lg;
     padding: 20px 40px;
   }
 
   .logo {
     @include pos-center;
+    width: 200px;
+    height: 64px;
 
     img {
-      width: 200px;
-      height: 64px;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
     }
   }
@@ -45,5 +48,18 @@
     justify-content: end;
     padding: 20px;
   }
+}
 
+@include responsive(T) {
+  .gnb {
+    height: $gnb-height-md;
+
+    &-wrapper {
+      height: $gnb-height-md;
+    }
+
+    .logo {
+      width: 180px;
+    }
+  }
 }
