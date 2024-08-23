@@ -6,8 +6,8 @@ import { faUser } from '@fortawesome/free-regular-svg-icons';
 import logo from '../assets/images/logo.png';
 
 const Gnb = () => {
-  const menuList = ['shop', 'genuine artist', 'archive', 'q&a', 'location'];
-  const joinList = ['register', 'sign', 'cart', 'search'];
+  const menuList = ['shop', 'archive', 'q&a', 'location'];
+  const joinList = ['login', 'cart', 'search'];
 
   return (
     <header className='gnb'>
