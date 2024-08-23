@@ -18,6 +18,11 @@
       height: 100%;
     }
   }
+
+  &-alert {
+    display: none;
+    color: red;
+  }
   
   &-stay {
     margin-top: 16px;
