@@ -12,9 +12,9 @@ import PrivateRoute from './route/PrivateRoute';
 function App() {
   const [authenticate, setAuthenticate] = useState(false); // true면 로그인
 
-  useEffect(() => {
-    console.log('authenticate', authenticate)
-  }, [authenticate])
+  // useEffect(() => {
+  //   console.log('authenticate', authenticate)
+  // }, [authenticate])
   return (
     <div>
       <Gnb authenticate={authenticate} />
