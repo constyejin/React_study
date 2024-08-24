@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const ProductCard = ({ item }) => {
   const navigate = useNavigate();
   const showDetail = () => {
-    navigate(`/product/:{item.id}`);
+    navigate(`/product/${item.id}`);
   }
   const price = item?.price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");;
 
