@@ -1,13 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import logo from '../assets/images/logo.png';
 
-const Gnb = ( {authenticate} ) => {
+const Gnb = ( {authenticate, setAuthenticate } ) => {
   const menuList = ['shop', 'archive', 'q&a', 'location'];
-  const joinList = [ authenticate == true ? 'my acount' : 'register', authenticate == true ? 'logout' : 'login', 'cart'];
+  const joinList = [ authenticate == true ? 'my acount' : 'register', 
+                     authenticate == true ? 'logout' : 'login', 
+                     'cart'];
 
   const sidebarOpen = () => {
     const sidebar = document.querySelector('.sidebar');
@@ -23,6 +25,16 @@ const Gnb = ( {authenticate} ) => {
     overlay.classList.remove('active');
   }
 
+  const navigate = useNavigate();
+  const loginToggle = (e) => {
+    if(e.target.innerHTML === 'LOGIN') {
+      setAuthenticate(true);
+      navigate('/login');
+    } else if(e.target.innerHTML === 'LOGOUT') {
+      setAuthenticate(false);
+      navigate('/');
+    }
+  }
 
   return (
     <>
@@ -59,10 +71,8 @@ const Gnb = ( {authenticate} ) => {
             {
               joinList.map((menu, index) => {
                 return (
-                  <li key={index}>
-                    <Link to={menu.split(' ').join('')}>
-                      {menu.toUpperCase()}
-                    </Link>
+                  <li onClick={loginToggle} key={index}>
+                    {menu.toUpperCase()}
                   </li>
                 )
               })
