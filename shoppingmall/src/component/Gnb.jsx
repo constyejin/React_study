@@ -86,10 +86,8 @@ const Gnb = ( {authenticate, setAuthenticate } ) => {
           {
             joinList.map((menu, index) => {
               return (
-                <li key={index}>
-                  <Link to={menu.split(' ').join('')}>
-                    {menu.toUpperCase()}
-                  </Link>
+                <li onClick={loginToggle} key={index}>
+                  {menu.toUpperCase()}
                 </li>
               )
             })
