@@ -20,7 +20,7 @@ const ProductDetail = () => {
   return (
     <div className='container'>
       <div className="row">
-        <div className='col-lg-12'>
+        <div className='col-lg-12 col-sm-4'>
           <div className='detail'>
             <div className='detail-img'>
               <img src={product?.img.imgCard} alt={product?.title} />
@@ -57,7 +57,6 @@ const ProductDetail = () => {
                 <button className='detail-btn-cart' type='button'>장바구니</button>
               </div>
             </div>
-
           </div>
         </div>
       </div>
