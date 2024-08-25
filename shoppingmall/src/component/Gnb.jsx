@@ -7,7 +7,7 @@ import logo from '../assets/images/logo.png';
 
 const Gnb = ( {authenticate} ) => {
   const menuList = ['shop', 'archive', 'q&a', 'location'];
-  const joinList = [authenticate == true ? 'logout' : 'login', 'cart', 'search'];
+  const joinList = [ authenticate == true ? 'my acount' : 'register', authenticate == true ? 'logout' : 'login', 'cart'];
 
   const sidebarOpen = () => {
     const sidebar = document.querySelector('.sidebar');
