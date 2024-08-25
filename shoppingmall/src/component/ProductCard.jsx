@@ -6,7 +6,7 @@ const ProductCard = ({ item }) => {
   const showDetail = () => {
     navigate(`/product/${item.id}`);
   }
-  const price = item?.price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");;
+  const price = item?.price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 
   return (
     <div className='product-card' onClick={showDetail}>
