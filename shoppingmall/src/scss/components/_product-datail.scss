@@ -2,12 +2,13 @@
   @include flexbox(center, start);
 
   &-img {
+    width: 100%;
     margin-right: 60px;
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 
@@ -72,5 +73,22 @@
         border-color: #444;
       }
     }
+  }
+}
+
+@include responsive(T) {
+  .detail {
+    @include column-flexbox;
+
+    &-img {
+      margin-right: 0;
+    }
+
+    &-info {
+      align-self: start;
+      width: 100%;
+      margin-top: 20px;
+    }
+
   }
 }
