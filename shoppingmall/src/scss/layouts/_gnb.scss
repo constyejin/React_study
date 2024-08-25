@@ -33,8 +33,11 @@
   &-join-list {
     @include flexbox;
 
-    a {
+    li {
       padding: 0 8px;
+    }
+
+    a {
       transition: opacity 300ms ease-in-out;
 
       &:hover {
