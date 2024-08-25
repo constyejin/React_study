@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 // import { Container, Row, Col } from 'react-bootstrap';
 import ProductCard from '../component/ProductCard';
 import SearcBox from '../component/SearcBox';
 
 const ProductAll = () => {
   const [productList, setProductList] = useState([]);
+  const [query, setQuery] = useSearchParams();
+
 
   const getProducts = async () => {
-    let url = `https://my-json-server.typicode.com/constyejin/React_study/products`;
+    let searchQuery = query.get('q') || '';
+    console.log('searchQuery', searchQuery) ;
+    let url = `https://my-json-server.typicode.com/constyejin/React_study/products/?q=${searchQuery}`;
     let response = await fetch(url);
     let data = await response.json();
     setProductList(data);
@@ -15,7 +20,7 @@ const ProductAll = () => {
 
   useEffect(() => {
     getProducts();
-  }, []);
+  }, [query]);
 
   return (
     <div className="container">
