@@ -9,7 +9,7 @@ function App() {
   let count = useSelector(state => state.count);
   let id = useSelector(state => state.id);
   let pw = useSelector(state => state.pw);
-  console.log(id, pw)
+  console.log(count)
 
   const dispatch = useDispatch();
 
@@ -19,17 +19,28 @@ function App() {
     dispatch({type: 'INCREMENT', payload: {num: 10}});
   }
 
+  const decrease = () => {
+    if(count > 0) {
+      dispatch({type: 'DECREMENT'})
+    }
+  }
+
   const login = () => {
     dispatch({type: 'LOGIN', payload: { id: 'yejin', pw: 'hehehe' } });
   }
 
   return (
-    <div>
-      <h1>{id}, {pw}</h1>
-      <button onClick={login}>Login</button>
-      <h1>{count}</h1>
-      <button onClick={increase}>증가</button>
-      <Box />
+    <div className='wrapper'>
+      {/* <h1>{id}, {pw}</h1>
+      <button onClick={login}>Login</button> */}
+      <div className='game-box'>
+        <div>
+          <h1 className='count'>{count}</h1>
+          <button onClick={increase} className='btn plus-btn'></button>
+          <button onClick={decrease} className='btn minus-btn'></button>
+        </div>
+      </div>
+      {/* <Box /> */}
     </div>
   );
 }
