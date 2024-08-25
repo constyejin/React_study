@@ -7,6 +7,12 @@ body {
   background-color: #000;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
 .game-box {
   position: absolute;
   top: 50%;
@@ -35,3 +41,24 @@ body {
   transform: translateX(-50%);
 }
 
+.btn {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.plus-btn {
+  bottom: 155px;
+  right: 90px;
+  background-image: url(./assets/images/plus.png);
+}
+
+.minus-btn {
+  bottom: 180px;
+  right: 30px;
+  background-image: url(./assets/images/minus.png);
+}
