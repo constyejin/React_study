@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+}
+
+.game-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: 600px;
+  background-image: url('https://w7.pngwing.com/pngs/989/35/png-transparent-white-handheld-console-iphone-7-plus-game-boy-color-iphone-6-computer-icons-icon-size-gameboy-miscellaneous-gadget-electronic-device-thumbnail.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 90px;
+  overflow: hidden;
+}
+
+.game-box > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.count {
+  position: absolute;
+  top: 25%;
+  left: 51%;
+  transform: translateX(-50%);
+}
+
