@@ -15,16 +15,12 @@
   background-image: url('https://eg5c9vcv2j9.exactdn.com/wp-content/uploads/2023/07/AdobeStock_440069937-scaled.jpeg?lossy=1&ssl=1');
 }
 
-.wrapper.clear {
-  background-image: url('https://img.freepik.com/premium-photo/blue-sky-background-with-clouds-clouds-clear-day_522160-1095.jpg');
-}
-
 .wrapper.clear.morning {
   background-image: url('https://img.freepik.com/premium-photo/blue-sky-background-with-clouds-clouds-clear-day_522160-1095.jpg');
 }
 
 .wrapper.clear.night {
-  background-image: url('https://img.freepik.com/premium-photo/forest-night-with-pine-trees-dark-blue-sky-with-many-stars_104337-3830.jpg');
+  background-image: url('https://t4.ftcdn.net/jpg/07/48/83/37/360_F_748833790_rl3wNFoxvv3g5MCYPPjAFV2T4ysCnWFE.jpg');
 }
 
 .wrapper.clear .weather-icon {

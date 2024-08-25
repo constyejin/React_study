@@ -15,8 +15,9 @@ function App() {
   const [apiError, setApiError] = useState('');
 
 
-  // const cityHour = new Date().toLocaleTimeString('en-US', { timeZone: time && time, hour: '2-digit', hour12: false });
-  // console.log(cityHour)
+  // const cityHour = new Date().toLocaleDateString('en-US', {timeZone : time ? time : 'Rok', hour : '2-digit', hour12 : false});
+  // console.log(new Date())
+
   
 
   const API_KEY = process.env.REACT_APP_API_KEY;
@@ -64,7 +65,7 @@ function App() {
   // Rok, Europe/Paris, Europe/London
 
   useEffect(() => {
-    if(city == '') {
+    if(city === '') {
       setTime('Rok');
       setLoading(true);
       getCurrentLocation();

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 import { Routes, Route } from 'react-router-dom';
@@ -12,12 +12,9 @@ import PrivateRoute from './route/PrivateRoute';
 function App() {
   const [authenticate, setAuthenticate] = useState(false); // true면 로그인
 
-  // useEffect(() => {
-  //   console.log('authenticate', authenticate)
-  // }, [authenticate])
   return (
     <div>
-      <Gnb authenticate={authenticate} />
+      <Gnb authenticate={authenticate} setAuthenticate={setAuthenticate}/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/shop' element={<ProductAll/>} />
