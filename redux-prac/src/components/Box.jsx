@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import GrandSonBox from './GrandSonBox';
 
 const Box = () => {
-  const count = useSelector(state => state.count);
+  let count = useSelector(state => state.count);
 
   return (
     <div>
