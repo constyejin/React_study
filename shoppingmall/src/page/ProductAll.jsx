@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import { Container, Row, Col } from 'react-bootstrap';
 import ProductCard from '../component/ProductCard';
+import SearcBox from '../component/SearcBox';
 
 const ProductAll = () => {
   const [productList, setProductList] = useState([]);
@@ -18,7 +19,7 @@ const ProductAll = () => {
 
   return (
     <div className="container">
-      <div className="row"></div>
+      <div className="row">
         <div className="col-lg-12">
           <div className='collection-txt'>
             <p className='collection-txt-title'>Spring -Summer '24 COLLECTION</p>
@@ -31,6 +32,8 @@ const ProductAll = () => {
             </p>
           </div>
 
+          <SearcBox />
+
           <div className="product-card-list">
             {
               productList.map((item, index) => {
@@ -41,6 +44,7 @@ const ProductAll = () => {
             }
           </div>
         </div>
+      </div>
     </div>
   )
 }
