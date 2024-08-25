@@ -1,9 +1,25 @@
-.product-card-list {
-  @include flexbox(between, top);
-  flex-wrap: wrap;
+.collection-txt {
+  padding: 50px 0 70px;
+  text-align: center;
+
+  &-title {
+    @include text-style-24;
+    font-weight: 700;
+  }
+
+  p:last-child {
+    @include text-style-16;
+    font-weight: 300;
+    margin-top: 20px
+  }
 }
 
 .product-card {
+  &-list {
+    @include flexbox(between, top);
+    flex-wrap: wrap;
+  }
+
   position: relative;
   width: calc((100% / 4) - 10px);
   text-align: center;
@@ -53,6 +69,19 @@
 }
 
 @include responsive(T) {
+  .collection-txt {
+    padding: 50px 0 60px;
+
+    &-title {
+      @include text-style-18;
+    }
+
+    p:last-child {
+      @include text-style-14;
+      line-height: 1.8;
+    }
+  }
+  
   .product-card {
     width: calc((100% / 2) - 20px);
 
