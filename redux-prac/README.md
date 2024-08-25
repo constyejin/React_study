@@ -9,5 +9,5 @@ Redux Practice
 </div>
 
 --- 
-<a href='https://ko.redux.js.org/'>Redux</a>
-<a href='https://react-redux.js.org/'>React Redux</a>
+<a href='https://ko.redux.js.org/'>Redux 공식 홈페이지</a> <br>
+<a href='https://react-redux.js.org/'>React Redux 공식 홈페이지</a>
