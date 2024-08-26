@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +7,7 @@
 
 body {
   background-color: #000;
+  font-family: "Jersey 10", sans-serif;
 }
 
 button {
@@ -20,11 +23,11 @@ button {
   transform: translate(-50%, -50%);
   width: 380px;
   height: 600px;
-  background-image: url('https://w7.pngwing.com/pngs/989/35/png-transparent-white-handheld-console-iphone-7-plus-game-boy-color-iphone-6-computer-icons-icon-size-gameboy-miscellaneous-gadget-electronic-device-thumbnail.png');
+  background-image: url(./assets/images/back.jpeg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
-  border-radius: 90px;
+  background-size: cover;
+  border-radius: 20px;
   overflow: hidden;
 }
 
@@ -37,14 +40,15 @@ button {
 .count {
   position: absolute;
   top: 25%;
-  left: 51%;
+  left: 50%;
   transform: translateX(-50%);
+  font-size: 40px;
 }
 
 .btn {
   position: absolute;
-  width: 52px;
-  height: 52px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   background-repeat: no-repeat;
   background-position: center;
@@ -52,13 +56,13 @@ button {
 }
 
 .plus-btn {
-  bottom: 155px;
-  right: 90px;
+  bottom: 158px;
+  right: 97px;
   background-image: url(./assets/images/plus.png);
 }
 
 .minus-btn {
-  bottom: 180px;
-  right: 30px;
+  bottom: 179px;
+  right: 29px;
   background-image: url(./assets/images/minus.png);
 }
