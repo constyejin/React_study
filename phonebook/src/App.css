@@ -278,6 +278,10 @@ header {
       font-size: 14px;
     }
   }
+
+  .contact-modal {
+    top: 10%;
+  }
 }
 
 
@@ -325,6 +329,17 @@ header {
       margin-right: 0;
     }
   }
+
+  .contact-modal {
+    top: 6%;
+    width: 70%;
+    height: 72%;
+  }
+
+  .profile {
+    width: 80%;
+  }
+
 }
 
 
