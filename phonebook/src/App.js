@@ -1,4 +1,3 @@
-import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import './App.css';
 
@@ -12,9 +11,7 @@ function App() {
   return (
     <div className='wrapper'>
       <Header setModal={setModal}/>
-      <Routes>
-        <Route path='/' element={ <ContactList />} />
-      </Routes>
+      <ContactList />
       {
         modal === true ? <ContactForm setModal={setModal} /> : null
       }

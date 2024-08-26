@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,7 +10,6 @@ const ContactForm = ({ setModal }) => {
   const [email, setEmail] = useState('');
   const [profileImg, setProfileImg] = useState('https://www.jetbrains.com/community/user-groups/img/user-group.svg');
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const addContact = (e) => {
     e.preventDefault();
