@@ -1,5 +1,3 @@
-import { act } from 'react';
-
 let initialState = {
   contactList: []
 }
@@ -17,6 +15,8 @@ function reducer(state = initialState, action) {
             name: payload.name, 
             phone: payload.phone, 
             email: payload.email,
+            profileImg: payload.profileImg,
+            profileImgAlt: payload.profileImgAlt,
           },
         ],
       };

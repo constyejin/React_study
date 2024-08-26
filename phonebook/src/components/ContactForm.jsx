@@ -9,11 +9,12 @@ const ContactForm = ({ setModal }) => {
   const [phone, setPhone] = useState(0);
   const [email, setEmail] = useState('');
   const [profileImg, setProfileImg] = useState('https://www.jetbrains.com/community/user-groups/img/user-group.svg');
+  const [profileImgAlt, setProfileImgAlt] = useState('');
   const dispatch = useDispatch();
 
   const addContact = (e) => {
     e.preventDefault();
-    dispatch({type: 'ADD_CONTACT' , payload: {name, phone, email, profileImg}});
+    dispatch({type: 'ADD_CONTACT' , payload: {name, phone, email, profileImg, profileImgAlt}});
     setModal(false);
   }
 
@@ -25,6 +26,8 @@ const ContactForm = ({ setModal }) => {
         setProfileImg(reader.result);
       };
       reader.readAsDataURL(e.target.files[0]);
+      const imgAlt = e.target.files[0].name;
+      setProfileImgAlt(imgAlt);
     }
   }
 
