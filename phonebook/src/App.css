@@ -195,7 +195,6 @@ header {
   border-radius: 14px;
 }
 
-
 .contact-modal form {
   width: 80%;
   margin: 0 auto;
@@ -332,12 +331,20 @@ header {
 
   .contact-modal {
     top: 6%;
-    width: 70%;
+    width: 80%;
     height: 72%;
   }
 
+  .modal-close-btn {
+    font-size: 20px;
+  }
+
   .profile {
-    width: 80%;
+    width: 140px;
+
+    img {
+      height: 140px;
+    }
   }
 
 }
