@@ -33,7 +33,7 @@ const ContactForm = ({ setModal }) => {
           </div>
 
           <div className="input-box num">
-            <input onChange={(e) => setPhone(e.target.value)} type="text" placeholder='Phone Numner' />
+            <input onChange={(e) => setPhone(e.target.value)} type="number" placeholder='Phone Number' />
           </div>
 
           <div className="input-box num">
