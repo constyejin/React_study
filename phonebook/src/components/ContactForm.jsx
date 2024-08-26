@@ -8,12 +8,35 @@ const ContactForm = ({ setModal }) => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState(0);
   const [email, setEmail] = useState('');
+  const [profile, setProfile] = useState('https://www.jetbrains.com/community/user-groups/img/user-group.svg');
   const dispatch = useDispatch();
 
   const addContact = (e) => {
     e.preventDefault();
     dispatch({type: 'ADD_CONTACT' , payload: {name, phone, email}});
   }
+
+  // const profileChange = (e) => {
+  //   const file = e.target.files && e.target.files[0]; 
+  //   if (file) {
+  //     const reader = new FileReader();
+  //     reader.onloadend = () => {
+  //       setProfile(reader.result);
+  //     };
+  //     reader.readAsDataURL(file);
+  //   }
+  // }
+
+    const profileChange = (e) => {
+      if(e.target.files && e.target.files[0]) {
+        const reader = new FileReader();
+
+        reader.onload = () => {
+          setProfile(reader.result);
+        };
+        reader.readAsDataURL(e.target.files[0]);
+      }
+    }
 
   return (
     <div className='contact-form'>
@@ -24,8 +47,9 @@ const ContactForm = ({ setModal }) => {
 
         <form onSubmit={addContact} action="">
           <div className='profile'>
-            <img src="https://www.jetbrains.com/community/user-groups/img/user-group.svg" alt="user-img" />
-            <input type="file" />
+            <img src={profile} alt="user-img" />
+            <label htmlFor="profileImg">프로필 이미지 추가</label>
+            <input onChange={profileChange} id="profileImg" type="file" accept="image/*"/>
           </div>
 
           <div className="input-box name">
