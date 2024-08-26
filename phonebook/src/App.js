@@ -27,7 +27,7 @@ function App() {
       
       <ContactList />
       {
-        modal === true ? <ContactForm /> : null
+        modal === true ? <ContactForm setModal={setModal} /> : null
       }
     </div>
   );

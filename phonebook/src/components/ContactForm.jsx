@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose } from '@fortawesome/free-solid-svg-icons'
 
-const ContactForm = () => {
+const ContactForm = ({ setModal }) => {
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState(0);
+  const [email, setEmail] = useState('');
+
   return (
     <div className='contact-form'>
       <div className="contact-modal">
-        <div className='modal-close-btn'>
+        <div onClick={() => setModal(false)} className='modal-close-btn'>
           <FontAwesomeIcon icon={faClose} />
         </div>
 
@@ -18,15 +22,15 @@ const ContactForm = () => {
           </div>
 
           <div className="input-box name">
-            <input type="text" placeholder='Name' />
+            <input onChange={(e) => setName(e.target.value)} type="text" placeholder='Name' />
           </div>
 
           <div className="input-box num">
-            <input type="text" placeholder='Phone Numner' />
+            <input onChange={(e) => setPhone(e.target.value)} type="text" placeholder='Phone Numner' />
           </div>
 
           <div className="input-box num">
-            <input type="email" placeholder='E-mail' />
+            <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder='E-mail' />
           </div>
 
           <button className='create-btn' type='submit'>Create</button>
