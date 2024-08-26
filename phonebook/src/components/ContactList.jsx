@@ -1,15 +1,15 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import ContactItem from './ContactItem';
 
 const ContactList = () => {
+  const contactList = useSelector(state => state.contactList)
+  console.log(contactList);
   return (
     <div className='contact-user-list'>
-      <ContactItem />
-      <ContactItem />
-      <ContactItem />
-      <ContactItem />
-      <ContactItem />
-      <ContactItem />
+      {
+        contactList.map((item) => <ContactItem /> )
+      }
     </div>
   )
 }
