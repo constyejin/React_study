@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose } from '@fortawesome/free-solid-svg-icons'
@@ -7,6 +8,12 @@ const ContactForm = ({ setModal }) => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState(0);
   const [email, setEmail] = useState('');
+  const dispatch = useDispatch();
+
+  const addContact = (e) => {
+    e.preventDefault();
+    dispatch({type: 'ADD_CONTACT' , payload: {name, phone, email}});
+  }
 
   return (
     <div className='contact-form'>
@@ -15,9 +22,9 @@ const ContactForm = ({ setModal }) => {
           <FontAwesomeIcon icon={faClose} />
         </div>
 
-        <form action="">
+        <form onSubmit={addContact} action="">
           <div className='profile'>
-            <img src="https://www.jetbrains.com/community/user-groups/img/user-group.svg" alt="" />
+            <img src="https://www.jetbrains.com/community/user-groups/img/user-group.svg" alt="user-img" />
             <input type="file" />
           </div>
 
