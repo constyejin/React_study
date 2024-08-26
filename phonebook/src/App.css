@@ -93,10 +93,16 @@ header {
   }
 }
 
+.contact-length {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 60px;
+  padding: 8px 24px;
+}
+
 .contact-user-list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 60px;
 }
 
 .contact-user-item {
