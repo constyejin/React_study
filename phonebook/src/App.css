@@ -50,7 +50,7 @@ header {
   width: 420px;
   height: 60px;
   margin-right: 12px;
-  padding-left: 86px;
+  padding-left: 66px;
   background-color: #fff;
   box-shadow: 0 4px 4px rgba(0, 0, 0, .4);
   border-radius: 14px;
@@ -60,13 +60,12 @@ header {
 .search-box input {
   width: 100%;
   height: 100%;
-
 }
 
 .search-icon {
   position: absolute;
   top: 50%;
-  left: 34px;
+  left: 24px;
   transform: translateY(-50%);
   font-size: 28px;
   color: #6418C3;
@@ -89,4 +88,77 @@ header {
     font-size: 18px;
     margin-right: 4px;
   }
+}
+
+.contact-form {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.contact-modal {
+  position: fixed;
+  top: 16%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 680px;
+  background-color: #fff;
+  border-radius: 14px;
+}
+
+
+.contact-modal form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.modal-close-btn {
+  text-align: right;
+  padding: 20px;
+  font-size: 24px;
+}
+
+.profile {
+  width: 300px;
+  margin: 0 auto;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+  }
+}
+
+.input-box{
+  width: 100%;
+  padding: 8px 20px;
+  border: 1.5px solid #6418C3;
+  border-radius: 14px;
+}
+
+.input-box.name {
+  margin-top: 40px;
+}
+
+.input-box.num {
+  margin-top: 8px;
+}
+
+.create-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px 0;
+  color: #fff;
+  border-radius: 14px;
+  background-color: #6418C3;
+  transition: opacity 300ms ease-in-out;
+}
+
+.create-btn:hover {
+  opacity: .7;
 }
