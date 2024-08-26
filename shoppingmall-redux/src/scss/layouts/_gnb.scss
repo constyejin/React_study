@@ -1,0 +1,69 @@
+.gnb {
+  position: relative;
+  height: $gnb-height-lg;
+
+  &-wrapper {
+    @include flexbox(between, center);
+    @include text-style-14;
+
+    position: fixed;
+    z-index: $gnb-level;
+    width: 100%;
+    height: $gnb-height-lg;
+    padding: 20px 40px;
+  }
+
+  .logo {
+    @include pos-center;
+    width: 200px;
+    height: 64px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &-menu-list {
+    padding-left: 0 !important;
+  }
+
+  &-menu-list,
+  &-join-list {
+    @include flexbox;
+
+    li {
+      padding: 0 8px;
+    }
+
+    a {
+      transition: opacity 300ms ease-in-out;
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+
+  .login-box {
+    display: flex;
+    justify-content: end;
+    padding: 20px;
+  }
+}
+
+@include responsive(T) {
+  .gnb {
+    height: $gnb-height-md;
+
+    &-wrapper {
+      height: $gnb-height-md;
+      background-color: #fff;
+    }
+
+    .logo {
+      width: 180px;
+    }
+  }
+}

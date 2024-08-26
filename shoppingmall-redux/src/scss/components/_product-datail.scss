@@ -1,0 +1,94 @@
+.detail {
+  @include flexbox(center, start);
+
+  &-img {
+    width: 100%;
+    margin-right: 60px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &-info {
+    &-price {
+      @include text-style-18;
+    }
+  }
+
+  &-delivery {
+    margin-top: 120px;
+
+    b {
+      margin-right: 8px;
+    }
+
+    span {
+      color: #777;
+    }
+  }
+
+  &-size {
+    @include column-flexbox(start, start);
+    margin-top: 40px;
+
+    select {
+      width: 100%;
+      margin-top: 12px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+    }
+  }
+
+  &-btn {
+    @include flexbox(between);
+    margin-top: 40px;
+
+    button {
+      width: 49%;
+      padding: 16px 0;
+      border-radius: 2px;
+    }
+
+    &-buy {
+      color: #fff;
+      background-color: #000;
+      transition: all 300ms ease-in-out;
+
+      &:hover {
+        color: #000;
+        background-color: #fff;
+        border: 1px solid #000;
+      }
+    }
+
+    &-cart {
+      border: 1px solid #ccc;
+      transition: border 300ms ease-in-out;
+      
+      &:hover {
+        border-color: #444;
+      }
+    }
+  }
+}
+
+@include responsive(T) {
+  .detail {
+    @include column-flexbox;
+
+    &-img {
+      margin-right: 0;
+    }
+
+    &-info {
+      align-self: start;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+  }
+}

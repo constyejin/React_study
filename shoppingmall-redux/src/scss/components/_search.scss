@@ -1,0 +1,36 @@
+.search {
+  @include flexbox(end);
+
+  &-box {
+    @include flexbox(between);
+    position: relative;
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 12px 8px;
+    border-bottom: 1px solid #000;
+
+    input {
+      flex-grow: 1;
+      height: 100%;
+      margin-left: 8px;
+    }
+  } 
+}
+
+@include responsive(T) {
+  .search {
+    @include flexbox(start);
+
+    &-box {
+      width: 48%;
+    } 
+  }
+}
+
+@include responsive(M) {
+  .search {
+    &-box {
+      width: 100%;
+    } 
+  }
+}
