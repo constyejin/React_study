@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
-
 html {
   font-family: "Space Grotesk", sans-serif;
 }
@@ -91,11 +90,14 @@ header {
 }
 
 .contact-user-list {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 60px;
 }
 
 .contact-user-item {
-  width: 276px;
+  width: calc((100% / 4) - 12px);
+  margin: 6px;
   padding: 40px 30px;
   text-align: center;
   background-color: #fff;
