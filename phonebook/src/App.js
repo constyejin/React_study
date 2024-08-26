@@ -1,12 +1,12 @@
+import { useState } from 'react';
 import './App.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
 
-import ContactList from './components/ContactList';
 import SearchBox from './components/SearchBox';
 import ContactForm from './components/ContactForm';
-import { useState } from 'react';
+import ContactList from './components/ContactList';
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -24,6 +24,7 @@ function App() {
           </button>
         </div>
       </header>
+      
       <ContactList />
       {
         modal === true ? <ContactForm /> : null
