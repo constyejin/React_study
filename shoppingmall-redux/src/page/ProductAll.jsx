@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import { productAction } from '../redux/actions/productAction';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import ProductCard from '../component/ProductCard';
 import SearcBox from '../component/SearcBox';
 
 const ProductAll = () => {
-  const [productList, setProductList] = useState([]);
+  const productList = useSelector(state => state.productList);
   const [query, setQuery] = useSearchParams();
   const dispatch = useDispatch();
 
