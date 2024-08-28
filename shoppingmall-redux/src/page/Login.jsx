@@ -1,7 +1,14 @@
 import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { authenticateAction } from '../redux/actions/authenticateAction';
+import { useState } from 'react';
 
 const Login = ({ setAuthenticate }) => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const [id, setId] = useState('');
+  const [pw, setPw] = useState('');
 
   const loginUser = (e) => {
     const email = document.querySelector('.login-email input').value;
@@ -10,7 +17,7 @@ const Login = ({ setAuthenticate }) => {
     e.preventDefault();
 
     if(email !== '' && pw !== '') {
-      setAuthenticate(true);
+    dispatch(authenticateAction.login(id, pw));
       navigate('/');
     } else {
       alert.style.display = 'block'
@@ -38,11 +45,11 @@ const Login = ({ setAuthenticate }) => {
 
       <form onSubmit={loginUser} action="" className='login-box'>
         <div className='login-input-box login-email'>
-          <input type="text" placeholder='아이디'/>
+          <input onChange={(e) => setId(e.target.value)} type="text" placeholder='아이디'/>
         </div>
 
         <div className='login-input-box login-pw'>
-          <input type="password" placeholder='비밀번호'/>
+          <input onChange={(e) => setPw(e.target.value)} type="password" placeholder='비밀번호'/>
         </div>
 
        <span className='login-alert'>아이디 및 비밀번호를 입력하세요.</span>
