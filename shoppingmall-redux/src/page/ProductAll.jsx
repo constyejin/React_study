@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import ProductCard from '../component/ProductCard';
 import SearcBox from '../component/SearcBox';
 
+import { fetchProducts } from '../redux/reducer/productReducer';
+
 const ProductAll = () => {
   const productList = useSelector(state => state.product.productList);
   const [query, setQuery] = useSearchParams();
@@ -14,7 +16,8 @@ const ProductAll = () => {
 
   const getProducts = () => {
     let searchQuery = query.get('q') || '';
-    dispatch(productAction.getProducts(searchQuery))
+    // dispatch(productAction.getProducts(searchQuery))
+    dispatch(fetchProducts(searchQuery));
   }
 
   useEffect(() => {
