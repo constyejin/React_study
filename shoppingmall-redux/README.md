@@ -28,5 +28,5 @@ Shopping Mall Project (Redux)
 <a href="https://www.npmjs.com/package/redux-devtools-extension">Redux DevTools Extension's helper</a>
 
 ```
-npm install --save redux-devtools-extension
+npm install @redux-devtools/extension  
 ```
