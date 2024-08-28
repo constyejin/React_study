@@ -21,3 +21,12 @@ Shopping Mall Project (Redux)
 
 <a href='https://github.com/reduxjs/redux-thunk'>Redux thunk</a>
 
+
+<h3>Installed</h3>
+
+<a href="https://chromewebstore.google.com/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=ko">Redux DevTools</a>
+<a href="https://www.npmjs.com/package/redux-devtools-extension">Redux DevTools Extension's helper</a>
+
+```
+npm install --save redux-devtools-extension
+```
