@@ -8,14 +8,15 @@ const ReactQueryPage = () => {
   //   return axios.get('http://localhost:3004/posts');
   // }
   
-  const { isLoading, data } = useQuery({
+  const { isLoading, data, isError, error } = useQuery({
     // API 호출에 유니크한 이름을 부여할 수 있다.
     queryKey: ['posts'],
     queryFn: () => {
       return axios.get('http://localhost:3004/posts');
     }
   })
-  console.log(isLoading,data)
+  console.log(isLoading,data);
+  console.log('ERROR', isError, error);
   return (
     <div>
       <h1>REACT-QUERY PAGE</h1>
