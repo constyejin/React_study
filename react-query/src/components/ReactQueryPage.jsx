@@ -12,8 +12,10 @@ const ReactQueryPage = () => {
     // API 호출에 유니크한 이름을 부여할 수 있다.
     queryKey: ['posts'],
     queryFn: () => {
-      return axios.get('http://localhost:3004/posts');
-    }
+      return axios.get('http://localhost:3004/post');
+    },
+    // API 호출 에러시 재시도 기본 횟수 3회 (retry로 원하는만큼 지정 가능)
+    retry: 1,
   })
   console.log(isLoading,data);
   console.log('ERROR', isError, error);
