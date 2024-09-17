@@ -17,6 +17,11 @@ const ReactQueryPage = () => {
     // API 호출 에러시 재시도 기본 횟수 3회 (retry로 원하는만큼 지정 가능)
     retry: 1,
   })
+
+  if(isLoading) {
+    return <h1>Loading...</h1>
+  }
+
   console.log(isLoading,data);
   console.log('ERROR', isError, error);
   return (
