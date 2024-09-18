@@ -22,6 +22,10 @@ const ReactQueryPage = () => {
     return <h1>Loading...</h1>
   }
 
+  if(isError) {
+    return <h1>{error.message}</h1>
+  }
+
   console.log(isLoading,data);
   console.log('ERROR', isError, error);
   return (
