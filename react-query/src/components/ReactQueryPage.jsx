@@ -16,6 +16,9 @@ const ReactQueryPage = () => {
     },
     // API 호출 에러시 재시도 기본 횟수 3회 (retry로 원하는만큼 지정 가능)
     retry: 1,
+    select: (data) => {
+      return data.data
+    }
   });
 
   console.log('DATA', isLoading,data);
@@ -27,9 +30,16 @@ const ReactQueryPage = () => {
   if(isError) {
     return <h1>{error.message}</h1>
   }
-  return <div>{data.data.map(item => (
-    <div>{item.title}</div>
-  ))}</div>;
+  return (
+    <div>
+      {data.map((item) => (
+        <div>
+          <p>{item.id}</p>
+          <p>{item.title}</p>
+        </div>
+      ))}
+    </div>
+  )
 };
 
 export default ReactQueryPage
