@@ -25,11 +25,24 @@
   font-size: 20px;
 }
 
+.reset-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  margin-top: 16px;
+  border-radius: 8px;
+  color: #fff;;
+  background-color: rgb(228, 0, 0);
+}
+
 .keyboardcontainer {
   width: 90%;
   display: flex;
   justify-content: center;
   margin-top: 15px;
+  clear: both;
 }
 
 .container {
