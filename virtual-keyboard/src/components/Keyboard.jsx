@@ -1,9 +1,4 @@
-// keyboard.js
 import React, { useState } from 'react';
-
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faDeleteLeft } from '@fortawesome/free-solid-svg-icons'
-
 
 export default function Keyboard() {
     const [inputText, setInputText] = useState('');
@@ -136,8 +131,6 @@ export default function Keyboard() {
           <pre>{inputText}</pre>
         </div>
 
-        <button onClick={() => inputResetFun() } type='button' className='reset-btn'>RESET</button>
-
         <div className="keyboardcontainer">
           <div className="container">
             <div className="row">
@@ -220,6 +213,7 @@ export default function Keyboard() {
                 </div>
               ))}
             </div>
+            <button onClick={() => inputResetFun() } type='button' className='reset-btn'>RESET</button>
           </div>
         </div>
       </div>
