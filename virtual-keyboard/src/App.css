@@ -1,4 +1,17 @@
-/* keyboard.css */
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+
+* {
+  font-family: "Jersey 25", sans-serif;
+  font-weight: 400;
+  font-style: normal; 
+}
+
+html, body {
+  font-family: "Jersey 25", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .keyboard {
   display: flex;
   height: 100vh;
@@ -9,32 +22,17 @@
 
 .textcontainer {
   width: 1018px;
-  height: 100px;
-  border: 1px solid rgba(0,0,0,0.25);
-  overflow: auto;
+  height: 150px;
+  color: #fff;
+  background-color: #202124;
   border-radius: 4px;
 }
 
-.textcontainer pre{
-  text-align: left;
-  display: block;
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
+.textcontainer pre {
+  overflow-y: scroll;
   margin: 0;
   padding: 20px;
-  font-size: 20px;
-}
-
-.reset-btn {
-  border: none;
-  outline: none;
-  cursor: pointer;
-  width: 100px;
-  height: 40px;
-  margin-top: 16px;
-  border-radius: 8px;
-  color: #fff;;
-  background-color: rgb(228, 0, 0);
+  font-size: 22px;
 }
 
 .keyboardcontainer {
@@ -80,30 +78,46 @@
   transition: background-color ease-in-out 0.15s;
 }
 
-.key:hover{
+.key:hover {
   background-color: #3c4d56;
 }
 
-.row:first-child .key:first-child{
+.row:first-child .key:first-child {
   width: 40px;
 }
 
-.row:first-child .key:last-child{
+.row:first-child .key:last-child {
   width: 80px;
 }
 
-.row:nth-child(3) .key:first-child{
+.row:nth-child(3) .key:first-child {
   width: 95px;
 }
-.row:nth-child(3) .key:last-child{
+
+.row:nth-child(3) .key:last-child {
   width: 95px;
 }
+
 .row:nth-child(4) .key:first-child{
   width: 130px;
 }
-.row:nth-child(4) .key:last-child{
+
+.row:nth-child(4) .key:last-child {
   width: 130px;
 }
+
 .row:nth-child(5) .key:nth-child(3){
   width: 550px;
+}
+
+.reset-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  margin-top: 16px;
+  border-radius: 8px;
+  color: #fff;;
+  background-color: rgb(228, 0, 0);
 }
