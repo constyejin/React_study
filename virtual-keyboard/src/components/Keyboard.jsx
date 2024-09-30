@@ -6,11 +6,6 @@ export default function Keyboard() {
     const [isShift, setIsShift] = useState(false);
     const [inputReset, setInputReset] = useState(false);
 
-    const inputResetFun = () => {
-      setInputReset(true);
-      setInputText('');
-    }
-
     const handleKeyClick = (key) => {
       if (key === 'Enter') {
         handleEnterKey();
@@ -125,6 +120,11 @@ export default function Keyboard() {
       setInputText(newContent);
     };
 
+    const inputResetFun = () => {
+      setInputReset(true);
+      setInputText('');
+    }
+
     return (
       <div className='keyboard'>
         <div className="textcontainer">
@@ -213,6 +213,7 @@ export default function Keyboard() {
                 </div>
               ))}
             </div>
+            
             <button onClick={() => inputResetFun() } type='button' className='reset-btn'>RESET</button>
           </div>
         </div>
