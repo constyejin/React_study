@@ -12,6 +12,13 @@ html, body {
   font-style: normal;
 }
 
+body {
+  /* background-image: url('./components/assets/images/back.png'); */
+  background-repeat: no-repeat;  
+  background-position: center;
+  background-size: cover;
+}
+
 .keyboard {
   display: flex;
   height: 100vh;
