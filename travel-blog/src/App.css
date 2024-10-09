@@ -34,7 +34,7 @@ h4, p {
 }
 
 .journal-header {
-  background-color: #d74180;
+  /* background-color: #d74180; */
   height: 130px;
   justify-content: center;
   align-items: center;
@@ -117,14 +117,14 @@ h4, p {
 }
 
 /* For mobile phones: */
-[class*=&quot;card-&quot;] {
+[class*="card-"] {
   width: 100%;
   flex-direction: column;
 }
 
 /* media queries */
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
   .card {
     background-color: #de3163;
   }
-}
+} */
