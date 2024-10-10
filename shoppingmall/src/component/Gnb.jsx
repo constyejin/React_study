@@ -8,19 +8,17 @@ import logo from '../assets/images/logo.png';
 const Gnb = ( {authenticate, setAuthenticate } ) => {
   const menuList = ['shop', 'archive', 'q&a', 'location'];
   const joinList = [ authenticate == true ? 'my acount' : 'register', 
-                     authenticate == true ? 'logout' : 'login', 
-                     'cart'];
+                     authenticate == true ? 'logout' : 'login', 'cart'];
+
+  const sidebar = document.querySelector('.sidebar');
+  const overlay = document.querySelector('.overlay');
 
   const sidebarOpen = () => {
-    const sidebar = document.querySelector('.sidebar');
-    const overlay = document.querySelector('.overlay');
     sidebar.classList.add('active');
     overlay.classList.add('active');
   }
   
   const sidebarClose = () => {
-    const sidebar = document.querySelector('.sidebar');
-    const overlay = document.querySelector('.overlay');
     sidebar.classList.remove('active');
     overlay.classList.remove('active');
   }
