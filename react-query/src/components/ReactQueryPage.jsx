@@ -16,9 +16,11 @@ const ReactQueryPage = () => {
     retry: 1,
     // 받은 전체 데이터에서 date만 return 
     select: (data) => {
-        return data.data
-      }
-    });
+      return data.data
+    },
+    // Gabage Time(V5) == Chche Time | 설정 안 했을 때 기본 값 5분
+    gcTime: 5000,
+  });
     
 
   if(isLoading) {
